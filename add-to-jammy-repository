@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Esteban M. Navas <algodelinux@gmail.com>
+# Fecha creación:      24/01/2019
+# Última modificación: 23/08/2023
+
+REPOSITORYDIR="/var/www/html/ies"
+LSBDISTCODENAME="jammy"
+
+# Si no hay parámetros, el script se está usando de forma interactiva
+if [ -z "$1" ]; then
+
+   DIALOG="dialog"
+   tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/test$$
+   trap "rm -f $tempfile" 0 1 2 5 15
+
+   $DIALOG --title "Añadir paquete al repositorio local" --clear \
+           --inputbox "Introduzca la ruta completa del paquete que desea añadir al repositorio:" 15 51 2> $tempfile
+
+   retval=$?
+
+   case $retval in
+     0)
+       PAQUETE=`cat $tempfile`
+     ;;
+     1) ;;
+   esac
+else
+   PAQUETE=$1
+fi
+
+
+if [ "$PAQUETE" ] ; then
+
+   CURRENTDIR=`pwd`
+   cd $REPOSITORYDIR
+
+   reprepro --ask-passphrase includedeb $LSBDISTCODENAME $PAQUETE
+
+   cd $CURRENTDIR
+fi
