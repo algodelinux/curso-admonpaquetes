@@ -1,0 +1,53 @@
+#!/bin/bash
+#
+# pkgsyncadd - Añade un nombre de paquete a los ficheros pkgsync
+# 2020 Esteban M. Navas Martín <algodelinux@gmail.com>.
+#
+
+# Obtener los parámetros pasados al script
+if [ -z $1 ] || [ -z $2 ]; then
+   echo "Sintaxis: $0 [paquete] [fichero] [tipo-maquina] [tipo-fichero]"
+   echo "   tipos de máquinas: workstation, siatic, infolab, notebook, notebookHP,..."
+   echo "   tipos de ficheros: musthave, mayhave, maynothave."
+
+   exit 1
+fi
+
+paquete=$1
+fichero=$2
+
+# Obtener los directorios de módulos
+modulepaths=$(puppet config print modulepath)
+
+# Dividir el string por el delimitador ':'
+IFS=:
+strmodulepaths=($modulepaths)
+
+for modulepath in "${strmodulepaths[@]}"; do
+  pkgsyncfiles="$(echo -e "${modulepath}" | tr -d '[:space:]')""/pkgsync/files"
+
+  # Si existe pkgsync en el directorio de módulos, insertamos el paquete en el fichero solicitado
+  if [ -d $pkgsyncfiles ]; then
+     if [ -n $3 ]; then
+        if [ -n $4 ]; then
+           encontrados=$(find $pkgsyncfiles/$3 -path "*$4*" -type f -name $fichero)
+        else
+           encontrados=$(find $pkgsyncfiles/$3 -type f -name $fichero)
+        fi
+     else
+        encontrados=$(find $pkgsyncfiles -type f -name $fichero)
+     fi
+
+     IFS=$'\n'
+     strencontrados=($encontrados)
+
+     for encontrado in "${strencontrados[@]}"; do
+         # Si existe el fichero y el tamaño no es mayor que 0, añadimos una línea en blanco (sed no inserta en ficheros vacíos)
+         [ ! -s "$encontrado" ] && echo "" > $encontrado
+         sed -i "1i ${paquete}" $encontrado
+         sort -o $encontrado -u $encontrado
+         sed -i '/^$/d' $encontrado
+     done
+  fi
+done
+

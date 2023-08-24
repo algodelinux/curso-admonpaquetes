@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# pkgsyncfind - Busca un nombre de paquete en un fichero concreto o en todos los ficheros de pkgsync
+# 2020 Esteban M. Navas Martín <algodelinux@gmail.com>.
+#
+
+# Obtener los parámetros pasados al script
+if [ -z $1 ]; then
+   echo "Sintaxis: $0 [paquete]"
+   echo "          $0 [paquete] [fichero]"
+   exit 1
+fi
+
+# Obtener los directorios de módulos
+modulepaths=$(puppet config print modulepath)
+
+# Dividir el string por el delimitador ':'
+IFS=:
+strmodulepaths=($modulepaths)
+
+for modulepath in "${strmodulepaths[@]}"; do
+  pkgsyncfiles="$(echo -e "${modulepath}" | tr -d '[:space:]')""/pkgsync/files"
+
+  # Si existe el directorio de módulos, buscamos el paquete en el fichero solicitado
+  if [ -z $2 ]; then
+     [ -d $pkgsyncfiles ] && find $pkgsyncfiles -type f | xargs grep $1
+  else
+     [ -d $pkgsyncfiles ] && find $pkgsyncfiles -type f -name $2 | xargs grep $1
+  fi
+done
+

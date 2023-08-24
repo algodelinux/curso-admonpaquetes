@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# pkgsyncat - Muestra el contenido de ficheros pkgsync
+# 2020 Esteban M. Navas Martín <algodelinux@gmail.com>.
+#
+
+function uso {
+   echo "Sintaxis: $0 [fichero] [tipo-maquina] [tipo-fichero]"
+   echo "   tipos de máquinas: workstation, siatic, infolab, notebook, notebookHP,..."
+   echo "   tipos de ficheros: musthave, mayhave, maynothave."
+}
+
+# Obtener los parámetros pasados al script
+if [ -z $1 ]; then
+   uso
+   exit 1
+fi
+
+# Obtener los directorios de módulos
+modulepaths=$(puppet config print modulepath)
+
+# Dividir el string por el delimitador ':'
+IFS=:
+strmodulepaths=($modulepaths)
+
+for modulepath in "${strmodulepaths[@]}"; do
+  pkgsyncfiles="$(echo -e "${modulepath}" | tr -d '[:space:]')""/pkgsync/files"
+
+  # Si existe el directorio de módulos, buscamos el paquete en el fichero solicitado
+  if [ -d $pkgsyncfiles ]; then
+     if [ -n $2 ]; then
+        if [ -n $3 ]; then
+           find $pkgsyncfiles/$2 -path "*$3*" -type f -name $1 -exec echo {} \; -exec sed {} -e 's/^[ t]*//; s/[ t]*$//; /^$/d' \;
+        else
+           find $pkgsyncfiles/$2 -type f -name $1 -exec echo {} \; -exec sed {} -e 's/^[ t]*//; s/[ t]*$//; /^$/d' \;
+        fi
+     else
+        find $pkgsyncfiles -type f -name $1 -exec echo {} \; -exec sed {} -e 's/^[ t]*//; s/[ t]*$//; /^$/d' \;
+     fi
+  fi 
+done

@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# pkgsynclist - Muestra si las máquinas tienen un determinado fichero o lista los fichero de un tipo de máquina
+# 2020 Esteban M. Navas Martín <algodelinux@gmail.com>.
+#
+
+# Obtener los parámetros pasados al script
+if [ -z $1 ]; then
+   echo "Sintaxis: $0 [fichero | tipo de máquina]"
+   echo "   tipos de máquinas: workstation, siatic, infolab, notebook, notebookHP,..."
+   exit 1
+fi
+
+# Obtener los directorios de módulos
+modulepaths=$(puppet config print modulepath)
+
+# Dividir el string por el delimitador ':'
+IFS=:
+strmodulepaths=($modulepaths)
+
+for modulepath in "${strmodulepaths[@]}"; do
+  pkgsyncfiles="$(echo -e "${modulepath}" | tr -d '[:space:]')""/pkgsync/files"
+
+  test -d $pkgsyncfiles/$1
+
+  if [ $? -eq 0 ]; then
+     [ -d $pkgsyncfiles ] && find "$pkgsyncfiles/$1/pkgsync_amd64" -type f -print
+  else
+     [ -d $pkgsyncfiles ] && find $pkgsyncfiles -type f -name $1
+  fi
+done
+
