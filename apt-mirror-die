@@ -1,0 +1,4 @@
+#
+# kill apt-mirror
+#
+0 8    * * *   apt-mirror      killall -9 apt-mirror; /var/spool/apt-mirror/var/clean.sh; /var/spool/apt-mirror/var/post-mirror.sh
