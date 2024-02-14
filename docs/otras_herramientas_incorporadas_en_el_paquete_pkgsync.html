@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Otras herramientas incorporadas en el paquete pkgsync | Administración de paquetes en sistemas basados en Debian </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="enavas@algodelinux.com" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-271"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Administración de paquetes en sistemas basados en Debian</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Administración de paquetes en una red de equipos Ubuntu/Debian</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="preparacin_del_entorno_de_trabajo.html" class="daddy">Preparación del entorno de trabajo</a>
+   <ul class="other-section">
+      <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox.html" class="daddy">Instalación de VirtualBox</a>
+      <ul class="other-section">
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+         <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+      </ul>
+      </li>
+      <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+      <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+      <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+      <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+      <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+      <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+      <li><a href="crear_una_mquina_virtual.html" class="no-ch">Crear una máquina virtual</a></li>
+      <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+      <li><a href="clonar_una_mquina_virtual.html" class="no-ch">Clonar una máquina virtual</a></li>
+      <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+   </ul>
+   </li>
+   <li><a href="instalacin_mnima_de_xubuntu.html" class="daddy">Instalación mínima de Xubuntu</a>
+   <ul class="other-section">
+      <li><a href="requisitos_para_instalar_xubuntu.html" class="no-ch">Requisitos para instalar Xubuntu</a></li>
+      <li><a href="descarga_de_xubuntu.html" class="no-ch">Descarga de Xubuntu</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_utilizando_dd.html" class="no-ch">Crear un pendrive de instalación de Xubuntu utilizando dd</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_usando_etcher.html" class="no-ch">Crear un pendrive de instalación de Xubuntu usando Etcher</a></li>
+      <li><a href="instalacin_de_xubuntu_desktop.html" class="no-ch">Instalación de Xubuntu Desktop</a></li>
+      <li><a href="actividad_5.html" class="no-ch">Actividad 5</a></li>
+      <li><a href="configurar_acceso_remoto_mediante_ssh.html" class="no-ch">Configurar acceso remoto mediante ssh</a></li>
+      <li><a href="actividad_6.html" class="no-ch">Actividad 6</a></li>
+      <li><a href="paquetes_para_configurar_un_escritorio_educativo.html" class="daddy">Paquetes para configurar un "escritorio educativo"</a>
+      <ul class="other-section">
+         <li><a href="el_paquete_linexxubuntucore.html" class="no-ch">El paquete linex-xubuntu-core</a></li>
+         <li><a href="el_paquete_linexconfigldapclient.html" class="no-ch">El paquete linex-config-ldapclient</a></li>
+         <li><a href="el_paquete_linexubuntupuppet.html" class="no-ch">El paquete linex-ubuntu-puppet</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="gestin_automatizada_de_paquetes.html" class="current-page-parent daddy">Gestión automatizada de paquetes</a>
+   <ul>
+      <li><a href="gestin_de_paquetes_mediante_apt.html" class="daddy">Gestión de paquetes mediante apt</a>
+      <ul class="other-section">
+         <li><a href="actividad_7.html" class="no-ch">Actividad 7</a></li>
+      </ul>
+      </li>
+      <li><a href="gestionar_los_repositorios_de_nuestra_distribucin.html" class="daddy">Gestionar los repositorios de nuestra distribución</a>
+      <ul class="other-section">
+         <li><a href="aadir_un_nuevo_repositorio.html" class="no-ch">Añadir un nuevo repositorio</a></li>
+         <li><a href="eliminar_un_repositorio.html" class="no-ch">Eliminar un repositorio</a></li>
+         <li><a href="aadir_un_repositorio_personal.html" class="no-ch">Añadir un repositorio personal</a></li>
+         <li><a href="eliminar_el_repositorio_personal.html" class="no-ch">Eliminar el repositorio personal</a></li>
+         <li><a href="actividad_8.html" class="no-ch">Actividad 8</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_actualizaciones_mediante_unattendedupgrades.html" class="daddy">Gestión de actualizaciones mediante unattended-upgrades</a>
+      <ul class="other-section">
+         <li><a href="aadir_repositorios_a_unattendedupgrades.html" class="no-ch">Añadir repositorios a unattended-upgrades</a></li>
+         <li><a href="aadir_ppa_a_unattendedupgrades.html" class="no-ch">Añadir ppa a unattended-upgrades</a></li>
+         <li><a href="bloquear_la_actualizacin_de_paquetes.html" class="no-ch">Bloquear la actualización de paquetes</a></li>
+         <li><a href="otras_opciones_de_configuracin.html" class="no-ch">Otras opciones de configuración</a></li>
+         <li><a href="configurar_unattendedupgrades_para_enviar_un_email_cuando_se_produzca_un_error.html" class="no-ch">Configurar unattended-upgrades para enviar un email cuando se produzca un error</a></li>
+         <li><a href="comprobar_que_se_estn_realizando_las_actualizaciones.html" class="no-ch">Comprobar que se están realizando las actualizaciones</a></li>
+         <li><a href="cmo_se_inicia_unattendedupgrades.html" class="daddy">¿Cómo se inicia unattended-upgrades?</a>
+         <ul class="other-section">
+            <li><a href="el_fichero_etcaptaptconfd10periodic.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/10periodic</a></li>
+            <li><a href="el_fichero__etcaptaptconfd20autoupgrades.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/20auto-upgrades</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_9.html" class="no-ch">Actividad 9</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_paquetes_mediante_puppet.html" class="daddy">Gestión de paquetes mediante puppet</a>
+      <ul class="other-section">
+         <li><a href="el_recurso_package.html" class="no-ch">El recurso package</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_instalado.html" class="no-ch">Asegurar que un paquete se encuentre instalado</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_desinstalado.html" class="no-ch">Asegurar que un paquete se encuentre desinstalado</a></li>
+         <li><a href="gestionar_un_conjunto_de_paquetes.html" class="no-ch">Gestionar un conjunto de paquetes</a></li>
+         <li><a href="actividad_10.html" class="no-ch">Actividad 10</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="gestin_de_paquetes_mediante_pkgsync.html" class="current-page-parent daddy">Gestión de paquetes mediante pkgsync</a>
+      <ul>
+         <li><a href="funcionamiento.html" class="no-ch">Funcionamiento</a></li>
+         <li><a href="cundo_y_cmo_se_ejecuta_pkgsync.html" class="no-ch">¿Cuándo y cómo se ejecuta pkgsync?</a></li>
+         <li><a href="gua_de_estilo.html" class="no-ch">Guía de estilo</a></li>
+         <li><a href="instalacin_de_pkgsync.html" class="no-ch">Instalación de pkgsync</a></li>
+         <li><a href="actividad_11.html" class="no-ch">Actividad 11</a></li>
+         <li><a href="creacin_de_listas_de_paquetes.html" class="no-ch">Creación de listas de paquetes</a></li>
+         <li><a href="actividad_12.html" class="no-ch">Actividad 12</a></li>
+         <li><a href="creacin_de_listas_musthave_en_etcpkgsyncmusthaved.html" class="no-ch">Creación de listas musthave en /etc/pkgsync/musthave.d</a></li>
+         <li><a href="actividad_13.html" class="no-ch">Actividad 13</a></li>
+         <li><a href="creacin_de_listas_mayhave_en_etcpkgsyncmayhaved.html" class="no-ch">Creación de listas mayhave en /etc/pkgsync/mayhave.d</a></li>
+         <li><a href="actividad_14.html" class="no-ch">Actividad 14</a></li>
+         <li><a href="creacin_de_listas_maynothave_en_etcpkgsyncmaynothaved.html" class="no-ch">Creación de listas maynothave en /etc/pkgsync/maynothave.d</a></li>
+         <li><a href="actividad_15.html" class="no-ch">Actividad 15</a></li>
+         <li><a href="minimizar_el_fichero_etcpkgsyncmusthave.html" class="no-ch">Minimizar el fichero /etc/pkgsync/musthave</a></li>
+         <li><a href="actividad_16.html" class="no-ch">Actividad 16</a></li>
+         <li><a href="limpiar_ficheros_de_pkgsync.html" class="no-ch">Limpiar ficheros de pkgsync</a></li>
+         <li><a href="actividad_17.html" class="no-ch">Actividad 17</a></li>
+         <li><a href="configuracin_del_comportamiento_por_defecto_de_pkgsync.html" class="daddy">Configuración del comportamiento por defecto de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="variables_que_podemos_modificar.html" class="no-ch">Variables que podemos modificar</a></li>
+         </ul>
+         </li>
+         <li><a href="parmetros_de_pkgsync.html" class="daddy">Parámetros de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="uso_desde_la_lnea_de_comandos.html" class="no-ch">Uso desde la línea de comandos</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_18.html" class="no-ch">Actividad 18</a></li>
+         <li><a href="inicio_de_pkgsync_desde_el_terminal_tty12.html" class="no-ch">Inicio de pkgsync desde el terminal tty12</a></li>
+         <li><a href="instalacin_del_mdulo_puppetlabsapt.html" class="no-ch">Instalación del módulo puppetlabs-apt</a></li>
+         <li><a href="actividad_19.html" class="no-ch">Actividad 19</a></li>
+         <li><a href="gestin_de_paquetes_y_repositorios_mediante_el_mdulo_puppet_pkgsync.html" class="daddy">Gestión de paquetes y repositorios mediante el módulo puppet pkgsync</a>
+         <ul class="other-section">
+            <li><a href="initpp.html" class="no-ch">init.pp</a></li>
+            <li><a href="sourcespp.html" class="no-ch">sources.pp</a></li>
+         </ul>
+         </li>
+         <li><a href="buscar_insertar_y_eliminar_nombres_de_paquetes_en_los_ficheros_de_pkgsync.html" class="no-ch">Buscar, insertar y eliminar nombres de paquetes en los ficheros de pkgsync</a></li>
+         <li><a href="actividad_20.html" class="no-ch">Actividad 20</a></li>
+         <li id="active"><a href="otras_herramientas_incorporadas_en_el_paquete_pkgsync.html" class="active no-ch">Otras herramientas incorporadas en el paquete pkgsync</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_bsica_de_paquetes_y_metapaquetes.html" class="daddy">Creación básica de paquetes y metapaquetes</a>
+   <ul class="other-section">
+      <li><a href="crear_las_variables_debemail_y_debfullname_y_agregarlas_al_fichero_bashrc.html" class="no-ch">Crear las variables DEBEMAIL y DEBFULLNAME y agregarlas al fichero ~/.bashrc</a></li>
+      <li><a href="herramientas.html" class="daddy">Herramientas</a>
+      <ul class="other-section">
+         <li><a href="dpkg.html" class="no-ch">dpkg</a></li>
+         <li><a href="aptfile.html" class="no-ch">apt-file</a></li>
+         <li><a href="fakeroot.html" class="no-ch">fakeroot</a></li>
+         <li><a href="devscripts.html" class="no-ch">devscripts</a></li>
+         <li><a href="actividad_21.html" class="no-ch">Actividad 21</a></li>
+      </ul>
+      </li>
+      <li><a href="relaciones_entre_paquetes.html" class="no-ch">Relaciones entre paquetes</a></li>
+      <li><a href="reempaquetar_paquetes_utilizando_dpkgrepack.html" class="daddy">Reempaquetar paquetes utilizando dpkg-repack</a>
+      <ul class="other-section">
+         <li><a href="actividad_22.html" class="no-ch">Actividad 22</a></li>
+      </ul>
+      </li>
+      <li><a href="manipular_paquetes_utilizando_dpkgdeb.html" class="daddy">Manipular paquetes utilizando dpkg-deb</a>
+      <ul class="other-section">
+         <li><a href="desempaquetar_un_paquete.html" class="no-ch">Desempaquetar un paquete</a></li>
+         <li><a href="empaquetar_un_paquete.html" class="no-ch">Empaquetar un paquete</a></li>
+         <li><a href="actividad_23.html" class="no-ch">Actividad 23</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_paquetes_y_metapaquetes_utilizando_equivs.html" class="daddy">Crear paquetes y metapaquetes utilizando equivs</a>
+      <ul class="other-section">
+         <li><a href="procedimiento_de_creacin_de_paquetes_y_metapaquetes.html" class="no-ch">Procedimiento de creación de paquetes y metapaquetes</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_metapaquete.html" class="no-ch">Ejemplo de creación de un metapaquete</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_paquete.html" class="no-ch">Ejemplo de creación de un paquete</a></li>
+         <li><a href="actividad_24.html" class="no-ch">Actividad 24</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_de_paquetes_desde_cdigo_fuente_utilizando_checkinstall.html" class="daddy">Crear de paquetes desde código fuente utilizando checkinstall</a>
+      <ul class="other-section">
+         <li><a href="ejemplo_prctico_crear_el_paquete_megatools.html" class="no-ch">Ejemplo práctico: Crear el paquete megatools</a></li>
+         <li><a href="actividad_25.html" class="no-ch">Actividad 25</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_paquetes_binarios_y_metapaquetes_utilizando_debreate.html" class="daddy">Crear paquetes binarios y metapaquetes utilizando debreate</a>
+      <ul class="other-section">
+         <li><a href="instalar_debreate.html" class="no-ch">Instalar Debreate</a></li>
+         <li><a href="actividad_26.html" class="no-ch">Actividad 26</a></li>
+         <li><a href="crear_metapaquetes_utilizando_debreate.html" class="no-ch">Crear metapaquetes utilizando debreate</a></li>
+         <li><a href="actividad_27.html" class="no-ch">Actividad 27</a></li>
+         <li><a href="crear_paquetes_binarios_utilizando_debreate.html" class="no-ch">Crear paquetes binarios utilizando debreate</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_repositorio_local.html" class="daddy">Creación y gestión de un repositorio local</a>
+   <ul class="other-section">
+      <li><a href="generar_un_par_de_claves_para_asegurar_repositorio.html" class="daddy">Generar un par de claves para asegurar repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_28.html" class="no-ch">Actividad 28</a></li>
+      </ul>
+      </li>
+      <li><a href="instalar_y_configurar_reprepro.html" class="daddy">Instalar y configurar reprepro</a>
+      <ul class="other-section">
+         <li><a href="actividad_29.html" class="no-ch">Actividad 29</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_paquetes_al_repositorio.html" class="daddy">Añadir paquetes al repositorio</a>
+      <ul class="other-section">
+         <li><a href="el_script_addtorepository.html" class="no-ch">El script add-to-repository</a></li>
+         <li><a href="actividad_30.html" class="no-ch">Actividad 30</a></li>
+      </ul>
+      </li>
+      <li><a href="listar_paquetes_en_el_repositorio.html" class="daddy">Listar paquetes en el repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_31.html" class="no-ch">Actividad 31</a></li>
+      </ul>
+      </li>
+      <li><a href="eliminar_paquetes_del_repositorio.html" class="no-ch">Eliminar paquetes del repositorio</a></li>
+      <li><a href="aadir_el_repositorio_local_a_nuestros_clientes.html" class="daddy">Añadir el repositorio local a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_32.html" class="no-ch">Actividad 32</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_mirror_local.html" class="daddy">Creación y gestión de un mirror local</a>
+   <ul class="other-section">
+      <li><a href="instalacin_y_configuracin_de_aptmirror.html" class="no-ch">Instalación y configuración de apt-mirror</a></li>
+      <li><a href="iniciar_y_detener_la_construccin_del_mirror.html" class="no-ch">Iniciar y detener la construcción del mirror</a></li>
+      <li><a href="configurar_aptmirror_para_mirrorizar_repositorios_ubuntu.html" class="daddy">Configurar apt-mirror para mirrorizar repositorios Ubuntu</a>
+      <ul class="other-section">
+         <li><a href="actividad_33.html" class="no-ch">Actividad 33</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_el_mirror_a_nuestros_clientes.html" class="daddy">Añadir el mirror a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_34.html" class="no-ch">Actividad 34</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_una_entrada_dns_en_el_servidor.html" class="no-ch">Crear una entrada DNS en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_1_grabar_sesiones_de_terminal.html" class="no-ch">Anexo 1. Grabar sesiones de terminal</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="actividad_20.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="creacin_bsica_de_paquetes_y_metapaquetes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Otras herramientas incorporadas en el paquete pkgsync</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id309">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Obtener el listado de dependencias de un paquete</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta309_309_2" class="block iDevice_content">
+<div class="exe-text"><p>El paquete pkgsync nos proporciona un script <strong>get-package-dependencies</strong> al que pasamos como parámetro un nombre de paquete y nos proporciona un listado de las dependencias que tiene ese paquete.</p>
+<p>Ésto puede ser muy útil para saber qué paquetes <strong>no es necesario añadir</strong> a los ficheros de listas de paquetes de pkgsync puesto que ya se instalarán como dependencias de un paquete.</p>
+<p>Por ejemplo: Si ejecutamos el comando "<strong>get-package-dependencies libreoffice</strong>", el script nos mostrará qué paquetes se instalan como dependencia:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">   $ get-package-dependencies libreoffice</span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   libreoffice-base</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-calc</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-core</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-draw</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-impress</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-math</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-report-builder-bin</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice-writer</span><br /><span style="font-family: terminal, monaco, monospace;">   python3-uno</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Es decir, que, si añadimos el nombre del paquete libreoffice a cualquiera de los ficheros musthave, no será necesario añadir ninguno de los paquetes mostrados por el script, puesto que éstos se instalarán automáticamente como dependencias del paquete libreoffice.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id319">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Descargar un paquete y sus dependencias</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta319_319_2" class="block iDevice_content">
+<div class="exe-text"><p>Otra de las herramientas que acompañan a pkgsync es el script <strong>download_pkg_and_deps</strong>, al que tan sólo tenemos que pasar como parámetro un nombre de paquete y descargará el paquete junto con sus dependencias.</p>
+<p>Ésto puede ser muy útil, por ejemplo, para agregar los paquetes a un repositorio local o instalarlos manualmente.</p>
+<p>Por ejemplo: Si ejecutamos el comando "<strong>download_pkg_and_deps libreoffice</strong>", el script creará un directorio con el nombre del paquete (en este caso, libreoffice) y descargará dentro de él, el paquete junto con sus dependencias:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">   $ download_pkg_and_deps libreoffice<br /></span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   $ tree libreoffice/</span><br /><span style="font-family: terminal, monaco, monospace;">   libreoffice/</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-base_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-calc_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-core_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-draw_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-impress_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-math_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-report-builder-bin_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   ├── libreoffice-writer_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span><br /><span style="font-family: terminal, monaco, monospace;">   └── python3-uno_1%3a7.4.7~rc2-0ubuntu0.22.04.1~lo1_amd64.deb</span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   0 directories, 10 files</span></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id320">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Listar claves de repositorios expiradas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta320_320_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>apt-list-expired-keys</strong> es otra de las herramientas que incluye el paquete pkgsync. Esta herramienta listará las claves de repositorios que han expirado, si las hay.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">   # apt-list-expired-keys </span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   [/usr/share/keyrings]</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/google_linux_signing_key.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-cc-eal.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-cis.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-esm-apps.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-esm-infra-trusty.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-fips.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-realtime-kernel.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-advantage-ros.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-archive-keyring.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-archive-removed-keys.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-cloudimage-keyring.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-cloudimage-removed-keys.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /usr/share/keyrings/ubuntu-master-keyring.gpg</span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   [/etc/apt/trusted.gpg.d]</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/google_linux_signing_key.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/launchpad-getkeys_imported____C072A32983A736CF.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/libreoffice-ubuntu-libreoffice-still.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/ubuntuhandbook1-ubuntu-gimp.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cdimage.gpg</span><br /><span style="font-family: terminal, monaco, monospace;">   Checking /etc/apt/trusted.gpg.d/ubuntu-keyring-2018-archive.gpg</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>En este ejemplo, el script ha chequeado diferentes archivos de claves pero no ha detectado claves expiradas.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id321">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Eliminar claves de repositorios expiradas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta321_321_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>apt-remove-expired-keys</strong> elimina las claves de repositorios expiradas.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # apt-remove-expired-keys</span></td>
+</tr>
+</tbody>
+</table>
+<p>Si no hay claves expiradas, no mostrará ningún resultado  en pantalla.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id322">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Realizar un backup de los repositorios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta322_322_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>backup-repositories</strong> permite realizar un backup de los repositorios almacenados en <strong>/etc/apt/sources.list</strong> y los alojados en el directorio <strong>/etc/apt/sources.list.d/</strong> y los almacena en el fichero <strong>sources.list.tar.gz</strong> alojado en el directorio <strong> /var/backups/</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # backup-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id323">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Restaurar el backup de los repositorios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta323_323_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>restore-backup-repositories</strong> permite restaurar el backup de los repositorios (<strong>/var/backups/sources.list.tar.gz</strong>) en el directorio <strong>/etc/apt</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # restore-backup-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id324">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Listar el contenido del fichero de backup de los repositorios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta324_324_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>list-backup-repositories</strong> lista el contenido del fichero <strong>/var/backups/sources.list.tar.gz</strong> que almacena el backup de los repositorios de la máquina.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ list-backup-repositories </span><br /><span style="font-family: terminal, monaco, monospace;">   tar: Eliminando la `/' inicial de los nombres</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 27 2022-11-04 09:24 /etc/apt/sources.list</span><br /><span style="font-family: terminal, monaco, monospace;">   drwxr-xr-x root/root 0 2023-08-14 13:39 /etc/apt/sources.list.d/</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 128 2023-08-12 11:57 /etc/apt/sources.list.d/miktex-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 180 2023-08-12 11:57 /etc/apt/sources.list.d/es.archive.ubuntu.com-jammy-backports.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 164 2023-08-12 11:57 /etc/apt/sources.list.d/security.ubuntu.com-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 176 2023-08-12 11:57 /etc/apt/sources.list.d/es.archive.ubuntu.com-jammy-updates.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 159 2023-08-12 11:57 /etc/apt/sources.list.d/ubuntuhandbook1-ubuntu-avidemux-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 72 2023-08-12 11:57 /etc/apt/sources.list.d/vscode.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 111 2023-08-12 11:57 /etc/apt/sources.list.d/geogebra-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 115 2023-08-12 11:57 /etc/apt/sources.list.d/qgis-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 158 2023-08-12 11:57 /etc/apt/sources.list.d/xtradeb-ubuntu-launchpad-apps-jammy.list   </span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 158 2023-08-12 11:57 /etc/apt/sources.list.d/apandada1-ubuntu-foliate-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 169 2023-08-12 11:57 /etc/apt/sources.list.d/libreoffice-ubuntu-libreoffice-still-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 180 2023-08-12 11:57 /etc/apt/sources.list.d/mscore-ubuntu-ubuntu-mscore3-stable-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 170 2023-08-12 11:57 /etc/apt/sources.list.d/sandromani-ubuntu-gimagereader-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 129 2023-08-12 11:57 /etc/apt/sources.list.d/numix-ubuntu-ppa-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 138 2023-08-12 11:57 /etc/apt/sources.list.d/google-chrome-stable.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 135 2023-08-12 11:57 /etc/apt/sources.list.d/rvm-ubuntu-smplayer-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 135 2023-08-12 11:57 /etc/apt/sources.list.d/veyon-ubuntu-stable-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 127 2023-08-12 11:57 /etc/apt/sources.list.d/linex.educarex.es-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 169 2023-08-12 11:57 /etc/apt/sources.list.d/gambas-team-ubuntu-gambas3-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 172 2023-08-12 11:57 /etc/apt/sources.list.d/xtradeb-ubuntu-launchpadcontent-apps-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 160 2023-08-12 11:57 /etc/apt/sources.list.d/es.archive.ubuntu.com-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 120 2023-08-12 11:57 /etc/apt/sources.list.d/syncthing.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 137 2023-08-12 11:57 /etc/apt/sources.list.d/team-xbmc-ubuntu-ppa-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 150 2023-08-12 11:57 /etc/apt/sources.list.d/desarrollo.educarex.es-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 147 2023-08-12 11:57 /etc/apt/sources.list.d/brave-browser-release.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 113 2023-08-12 11:57 /etc/apt/sources.list.d/repositorio-local-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 80 2023-08-12 11:57 /etc/apt/sources.list.d/virtualbox.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 137 2023-08-12 11:57 /etc/apt/sources.list.d/peterlevi-ubuntu-ppa-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 135 2023-08-12 11:57 /etc/apt/sources.list.d/jclic-ubuntu-master-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   -rw-r--r-- root/root 176 2023-08-12 11:57 /etc/apt/sources.list.d/apandada1-ubuntu-xournalpp-stable-jammy.list</span></td>
+</tr>
+</tbody>
+</table>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id326">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Obtener un listado de los repositorios que fallan</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta326_326_2" class="block iDevice_content">
+<div class="exe-text"><p>Para saber si alguno de los repositorios alojados en <strong>/etc/apt/sources.list.d/</strong> falla, podemos usar el script <strong>list-failed-repositories</strong>.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # list-failed-repositories </span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/desarrollo.educarex.es-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/repositorio-local-jammy.list</span></td>
+</tr>
+</tbody>
+</table>
+<p>En este ejemplo, están fallando dos repositorios internos porque hemos ejecutado el comando fuera de intranet y no son accesibles desde fuera.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id327">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Desactivar repositorios que estén fallando</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta327_327_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>disable-failed-repositories</strong> nos permite deshabilitar los repositorios que se encuentran definidos dentro del directorio /etc/apt/sources.list.d/ y que están fallando. Para deshabilitarlos, lo que hace es añadir a los ficheros <strong>.list</strong> la extensión <strong>.disabled</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # disable-failed-repositories</span></td>
+</tr>
+</tbody>
+</table>
+<p>Si al ejecutar el comando <strong>list-failed-repositories</strong>, obtenéis una lista de repositorios que fallan:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # list-failed-repositories </span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/desarrollo.educarex.es-jammy.list</span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/repositorio-local-jammy.list</span></td>
+</tr>
+</tbody>
+</table>
+<p>Y los  deshabilitáis:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # disable-failed-repositories</span></td>
+</tr>
+</tbody>
+</table>
+<p>Podéis comprobar que están deshabilitados simplemente buscando ficheros con extensión <strong>.disabled</strong> dentro del directorio <strong>/etc/apt/sources.list.d/</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # find /etc/apt/sources.list.d/ -name "*.disabled"</span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/desarrollo.educarex.es-jammy.list.disabled</span><br /><span style="font-family: terminal, monaco, monospace;">   /etc/apt/sources.list.d/repositorio-local-jammy.list.disabled</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id328">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Habilitar repositorios deshabilitados</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta328_328_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>enable-disabled-repositories</strong> se encarga de habilitar repositorios deshabilitados en <strong>/etc/apt/sources.list.d/</strong> quitando a los ficheros <strong>.list</strong> la extensión <strong>.disabled</strong></p>
+<p></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # enable-disabled-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id329">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Habilitar repositorios deshabilitados que no fallen</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta329_329_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya hemos dicho, el script <strong>enable-disabled-repositories</strong> habilita todos los repositorios que tengan extensión <strong>.disabled</strong> en el directorio <strong>/etc/apt/sources.list.d/ </strong></p>
+<p>Por el contrario, el script <strong>enable-non-failed-repositories</strong> habilitará sólo aquellos repositorios deshabilitados en <strong>/etc/apt/sources.list.d/</strong> que no fallen quitando a los ficheros <strong>.list</strong> la extensión <strong>.disabled</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # enable-non-failed-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id330">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Listar repositorios desactivados</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta330_330_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>list-diabled-repositories</strong> muestra un listado de los ficheros de los repositorios alojados en el directorio <strong>/etc/apt/</strong> deshabilitados con extensión <strong>.disabled</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # list-disabled-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id331">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Eliminar todos los repositorios definidos en /etc/apt/sources.list.d</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta331_331_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>remove-all-repositories</strong> permite eliminar todos los ficheros de repositorios definidos en el directorio <strong>/etc/apt/sources.list.d</strong>, se encuentren o no desactivados.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # remove-all-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id332">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Eliminar los repositorios definidos en /etc/apt/sources.list.d que estén fallando</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta332_332_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>remove-failed-repositories</strong> elimina de <strong>/etc/apt/sources.list.d/</strong> los ficheros de repositorios que están fallando.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # remove-failed-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id333">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Eliminar el backup de repositorios</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta333_333_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>remove-backup-repositories</strong> elimina el fichero de backup de los repositorios <strong>sources.list.tar.gz </strong>alojado en el directorio<strong> /var/backups/</strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # remove-backup-repositories</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id334">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Obtener un listado de los paquetes esenciales instalados en el sistema</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta334_334_2" class="block iDevice_content">
+<div class="exe-text"><p>El script <strong>list-essential-packages</strong> nos permite obtener un listado de los paquetes esenciales instalados en el sistema. Los paquetes esenciales son los marcados como <strong>required</strong>, <strong>important</strong> y <strong>standard</strong>.</p>
+<ul>
+<li><strong>Required</strong>: Son paquetes necesarios para el propio funcionamiento del sistema.</li>
+<li><strong>Important</strong>: Son paquetes que deben encontrarse en cualquier sistema tipo Unix.</li>
+<li><strong>Standard</strong>: Son paquetes que son estándar en cualquier sistema Linux.</li>
+</ul>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # list-essential-packages</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id335">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Actualizar el software instalado en el sistema</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta335_335_2" class="block iDevice_content">
+<div class="exe-text"><p>Al realizar un pkgsync, antes de instalar/desinstalar el software definido en los ficheros de listas de paquetes, una de las primeras cosas que se hacen es actualizar el software instalado en el sistema.</p>
+<p>Ahora bien, para que también podamos actualizar el software del sistema sin realizar un pkgsync, agregamos un script muy interesante a pkgsync, cuyo nombre es <strong>softwareupdate</strong>, que nos permite actualizar los paquetes instalados mediante <strong>apt</strong>, <strong>flatpak</strong>, <strong>snap</strong>, además de realizar limpieza de paquetes al terminar.</p>
+<p>No os preocupéis si en vuestro sistema no tenéis instalados paquetes flatpak o snap porque el script tan sólo tratará de actualizar este tipo de paquetes si la herramienta flatpak o la herramienta snap se encuentran instaladas.</p>
+<p>Si queréis actualizar la paquetería de vuestro sistema, en lugar de hacer un simple "apt upgrade", os recomendamos usar este script porque, antes de actualizar, tratará de <strong>obtener las claves de repositorios</strong> que falten pero además, <strong>intentará resolver problemas de paquetes</strong>.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # softwareupdate</span></td>
+</tr>
+</tbody>
+</table>
+<p>Si queréis que <strong>softwareupdate</strong> apague el equipo al terminar, podéis pasarle el parámetro <strong>-S</strong>:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # softwareupdate -S</span></td>
+</tr>
+</tbody>
+</table>
+<p>Y si queréis que se reinicie el equipo al terminarl, podéis pasarle el parámetro <strong>-R</strong>:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # softwareupdate -R</span></td>
+</tr>
+</tbody>
+</table>
+<p>Si no recordáis la sintaxis de softwareupdate, siempre podéis ejecutarlo con el parámetro -h:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">   # softwareupdate -h</span><br /><span style="font-family: terminal, monaco, monospace;">   softwareupdate 1.2</span><br /><span style="font-family: terminal, monaco, monospace;">   Actualizar el software del equipo</span></p>
+<p><span style="font-family: terminal, monaco, monospace;">   Uso: /usr/local/sbin/softwareupdate [OPTIONS]</span><br /><span style="font-family: terminal, monaco, monospace;">   Opciones reconocidas:</span><br /><span style="font-family: terminal, monaco, monospace;">   -h mostrar esta ayuda y salir.</span><br /><span style="font-family: terminal, monaco, monospace;">   -S apagar el equipo al finalizar el proceso de actualización.</span><br /><span style="font-family: terminal, monaco, monospace;">   -R reiniciar el equipo al finalizar el proceso de actualización.</span></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id336">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Resolver problemas de paquetería</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta336_336_2" class="block iDevice_content">
+<div class="exe-text"><p>Si existen <strong>problemas en el sistema de paquetes</strong>, tanto <strong>pkgsync</strong> como <strong>softwareupdate</strong> van a tratar de resolverlos. No obstante, hemos agregado también un script <strong>solve-apt-errors</strong> que trata de resolver posibles errores de apt para poder ejecutarlo también independientemente de pkgsync o softwareupdate.</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # solve-apt-errors</span></td>
+</tr>
+</tbody>
+</table>
+<p>Si no existen errores en el sistema de paquetes, el script no hará nada.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_puzzle" id="id337">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_puzzle.png)"><h1 class="iDeviceTitle">Esperar mientras se esté trabajando con el gestor de paquetes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta337_337_2" class="block iDevice_content">
+<div class="exe-text"><p>Por último, comentar que el paquete pkgsync nos proporciona un script auxiliar <strong>wait_for_apt_or_dpkg</strong> que nos permite realizar una espera activa mientras alguna herramienta está usando el gestor de paquetes. Este script lo utilizamos, por ejemplo, en pkgsync, softwareupdate o solve-apt-errors.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="actividad_20.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="creacin_bsica_de_paquetes_y_metapaquetes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

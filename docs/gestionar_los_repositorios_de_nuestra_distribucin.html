@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Gestionar los repositorios de nuestra distribución | Administración de paquetes en sistemas basados en Debian </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="enavas@algodelinux.com" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-179"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Administración de paquetes en sistemas basados en Debian</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Administración de paquetes en una red de equipos Ubuntu/Debian</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="preparacin_del_entorno_de_trabajo.html" class="daddy">Preparación del entorno de trabajo</a>
+   <ul class="other-section">
+      <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox.html" class="daddy">Instalación de VirtualBox</a>
+      <ul class="other-section">
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+         <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+      </ul>
+      </li>
+      <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+      <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+      <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+      <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+      <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+      <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+      <li><a href="crear_una_mquina_virtual.html" class="no-ch">Crear una máquina virtual</a></li>
+      <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+      <li><a href="clonar_una_mquina_virtual.html" class="no-ch">Clonar una máquina virtual</a></li>
+      <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+   </ul>
+   </li>
+   <li><a href="instalacin_mnima_de_xubuntu.html" class="daddy">Instalación mínima de Xubuntu</a>
+   <ul class="other-section">
+      <li><a href="requisitos_para_instalar_xubuntu.html" class="no-ch">Requisitos para instalar Xubuntu</a></li>
+      <li><a href="descarga_de_xubuntu.html" class="no-ch">Descarga de Xubuntu</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_utilizando_dd.html" class="no-ch">Crear un pendrive de instalación de Xubuntu utilizando dd</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_usando_etcher.html" class="no-ch">Crear un pendrive de instalación de Xubuntu usando Etcher</a></li>
+      <li><a href="instalacin_de_xubuntu_desktop.html" class="no-ch">Instalación de Xubuntu Desktop</a></li>
+      <li><a href="actividad_5.html" class="no-ch">Actividad 5</a></li>
+      <li><a href="configurar_acceso_remoto_mediante_ssh.html" class="no-ch">Configurar acceso remoto mediante ssh</a></li>
+      <li><a href="actividad_6.html" class="no-ch">Actividad 6</a></li>
+      <li><a href="paquetes_para_configurar_un_escritorio_educativo.html" class="daddy">Paquetes para configurar un "escritorio educativo"</a>
+      <ul class="other-section">
+         <li><a href="el_paquete_linexxubuntucore.html" class="no-ch">El paquete linex-xubuntu-core</a></li>
+         <li><a href="el_paquete_linexconfigldapclient.html" class="no-ch">El paquete linex-config-ldapclient</a></li>
+         <li><a href="el_paquete_linexubuntupuppet.html" class="no-ch">El paquete linex-ubuntu-puppet</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="gestin_automatizada_de_paquetes.html" class="current-page-parent daddy">Gestión automatizada de paquetes</a>
+   <ul>
+      <li><a href="gestin_de_paquetes_mediante_apt.html" class="daddy">Gestión de paquetes mediante apt</a>
+      <ul class="other-section">
+         <li><a href="actividad_7.html" class="no-ch">Actividad 7</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="gestionar_los_repositorios_de_nuestra_distribucin.html" class="active daddy">Gestionar los repositorios de nuestra distribución</a>
+      <ul>
+         <li><a href="aadir_un_nuevo_repositorio.html" class="no-ch">Añadir un nuevo repositorio</a></li>
+         <li><a href="eliminar_un_repositorio.html" class="no-ch">Eliminar un repositorio</a></li>
+         <li><a href="aadir_un_repositorio_personal.html" class="no-ch">Añadir un repositorio personal</a></li>
+         <li><a href="eliminar_el_repositorio_personal.html" class="no-ch">Eliminar el repositorio personal</a></li>
+         <li><a href="actividad_8.html" class="no-ch">Actividad 8</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_actualizaciones_mediante_unattendedupgrades.html" class="daddy">Gestión de actualizaciones mediante unattended-upgrades</a>
+      <ul class="other-section">
+         <li><a href="aadir_repositorios_a_unattendedupgrades.html" class="no-ch">Añadir repositorios a unattended-upgrades</a></li>
+         <li><a href="aadir_ppa_a_unattendedupgrades.html" class="no-ch">Añadir ppa a unattended-upgrades</a></li>
+         <li><a href="bloquear_la_actualizacin_de_paquetes.html" class="no-ch">Bloquear la actualización de paquetes</a></li>
+         <li><a href="otras_opciones_de_configuracin.html" class="no-ch">Otras opciones de configuración</a></li>
+         <li><a href="configurar_unattendedupgrades_para_enviar_un_email_cuando_se_produzca_un_error.html" class="no-ch">Configurar unattended-upgrades para enviar un email cuando se produzca un error</a></li>
+         <li><a href="comprobar_que_se_estn_realizando_las_actualizaciones.html" class="no-ch">Comprobar que se están realizando las actualizaciones</a></li>
+         <li><a href="cmo_se_inicia_unattendedupgrades.html" class="daddy">¿Cómo se inicia unattended-upgrades?</a>
+         <ul class="other-section">
+            <li><a href="el_fichero_etcaptaptconfd10periodic.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/10periodic</a></li>
+            <li><a href="el_fichero__etcaptaptconfd20autoupgrades.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/20auto-upgrades</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_9.html" class="no-ch">Actividad 9</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_paquetes_mediante_puppet.html" class="daddy">Gestión de paquetes mediante puppet</a>
+      <ul class="other-section">
+         <li><a href="el_recurso_package.html" class="no-ch">El recurso package</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_instalado.html" class="no-ch">Asegurar que un paquete se encuentre instalado</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_desinstalado.html" class="no-ch">Asegurar que un paquete se encuentre desinstalado</a></li>
+         <li><a href="gestionar_un_conjunto_de_paquetes.html" class="no-ch">Gestionar un conjunto de paquetes</a></li>
+         <li><a href="actividad_10.html" class="no-ch">Actividad 10</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_paquetes_mediante_pkgsync.html" class="daddy">Gestión de paquetes mediante pkgsync</a>
+      <ul class="other-section">
+         <li><a href="funcionamiento.html" class="no-ch">Funcionamiento</a></li>
+         <li><a href="cundo_y_cmo_se_ejecuta_pkgsync.html" class="no-ch">¿Cuándo y cómo se ejecuta pkgsync?</a></li>
+         <li><a href="gua_de_estilo.html" class="no-ch">Guía de estilo</a></li>
+         <li><a href="instalacin_de_pkgsync.html" class="no-ch">Instalación de pkgsync</a></li>
+         <li><a href="actividad_11.html" class="no-ch">Actividad 11</a></li>
+         <li><a href="creacin_de_listas_de_paquetes.html" class="no-ch">Creación de listas de paquetes</a></li>
+         <li><a href="actividad_12.html" class="no-ch">Actividad 12</a></li>
+         <li><a href="creacin_de_listas_musthave_en_etcpkgsyncmusthaved.html" class="no-ch">Creación de listas musthave en /etc/pkgsync/musthave.d</a></li>
+         <li><a href="actividad_13.html" class="no-ch">Actividad 13</a></li>
+         <li><a href="creacin_de_listas_mayhave_en_etcpkgsyncmayhaved.html" class="no-ch">Creación de listas mayhave en /etc/pkgsync/mayhave.d</a></li>
+         <li><a href="actividad_14.html" class="no-ch">Actividad 14</a></li>
+         <li><a href="creacin_de_listas_maynothave_en_etcpkgsyncmaynothaved.html" class="no-ch">Creación de listas maynothave en /etc/pkgsync/maynothave.d</a></li>
+         <li><a href="actividad_15.html" class="no-ch">Actividad 15</a></li>
+         <li><a href="minimizar_el_fichero_etcpkgsyncmusthave.html" class="no-ch">Minimizar el fichero /etc/pkgsync/musthave</a></li>
+         <li><a href="actividad_16.html" class="no-ch">Actividad 16</a></li>
+         <li><a href="limpiar_ficheros_de_pkgsync.html" class="no-ch">Limpiar ficheros de pkgsync</a></li>
+         <li><a href="actividad_17.html" class="no-ch">Actividad 17</a></li>
+         <li><a href="configuracin_del_comportamiento_por_defecto_de_pkgsync.html" class="daddy">Configuración del comportamiento por defecto de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="variables_que_podemos_modificar.html" class="no-ch">Variables que podemos modificar</a></li>
+         </ul>
+         </li>
+         <li><a href="parmetros_de_pkgsync.html" class="daddy">Parámetros de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="uso_desde_la_lnea_de_comandos.html" class="no-ch">Uso desde la línea de comandos</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_18.html" class="no-ch">Actividad 18</a></li>
+         <li><a href="inicio_de_pkgsync_desde_el_terminal_tty12.html" class="no-ch">Inicio de pkgsync desde el terminal tty12</a></li>
+         <li><a href="instalacin_del_mdulo_puppetlabsapt.html" class="no-ch">Instalación del módulo puppetlabs-apt</a></li>
+         <li><a href="actividad_19.html" class="no-ch">Actividad 19</a></li>
+         <li><a href="gestin_de_paquetes_y_repositorios_mediante_el_mdulo_puppet_pkgsync.html" class="daddy">Gestión de paquetes y repositorios mediante el módulo puppet pkgsync</a>
+         <ul class="other-section">
+            <li><a href="initpp.html" class="no-ch">init.pp</a></li>
+            <li><a href="sourcespp.html" class="no-ch">sources.pp</a></li>
+         </ul>
+         </li>
+         <li><a href="buscar_insertar_y_eliminar_nombres_de_paquetes_en_los_ficheros_de_pkgsync.html" class="no-ch">Buscar, insertar y eliminar nombres de paquetes en los ficheros de pkgsync</a></li>
+         <li><a href="actividad_20.html" class="no-ch">Actividad 20</a></li>
+         <li><a href="otras_herramientas_incorporadas_en_el_paquete_pkgsync.html" class="no-ch">Otras herramientas incorporadas en el paquete pkgsync</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_bsica_de_paquetes_y_metapaquetes.html" class="daddy">Creación básica de paquetes y metapaquetes</a>
+   <ul class="other-section">
+      <li><a href="crear_las_variables_debemail_y_debfullname_y_agregarlas_al_fichero_bashrc.html" class="no-ch">Crear las variables DEBEMAIL y DEBFULLNAME y agregarlas al fichero ~/.bashrc</a></li>
+      <li><a href="herramientas.html" class="daddy">Herramientas</a>
+      <ul class="other-section">
+         <li><a href="dpkg.html" class="no-ch">dpkg</a></li>
+         <li><a href="aptfile.html" class="no-ch">apt-file</a></li>
+         <li><a href="fakeroot.html" class="no-ch">fakeroot</a></li>
+         <li><a href="devscripts.html" class="no-ch">devscripts</a></li>
+         <li><a href="actividad_21.html" class="no-ch">Actividad 21</a></li>
+      </ul>
+      </li>
+      <li><a href="relaciones_entre_paquetes.html" class="no-ch">Relaciones entre paquetes</a></li>
+      <li><a href="reempaquetar_paquetes_utilizando_dpkgrepack.html" class="daddy">Reempaquetar paquetes utilizando dpkg-repack</a>
+      <ul class="other-section">
+         <li><a href="actividad_22.html" class="no-ch">Actividad 22</a></li>
+      </ul>
+      </li>
+      <li><a href="manipular_paquetes_utilizando_dpkgdeb.html" class="daddy">Manipular paquetes utilizando dpkg-deb</a>
+      <ul class="other-section">
+         <li><a href="desempaquetar_un_paquete.html" class="no-ch">Desempaquetar un paquete</a></li>
+         <li><a href="empaquetar_un_paquete.html" class="no-ch">Empaquetar un paquete</a></li>
+         <li><a href="actividad_23.html" class="no-ch">Actividad 23</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_paquetes_y_metapaquetes_utilizando_equivs.html" class="daddy">Crear paquetes y metapaquetes utilizando equivs</a>
+      <ul class="other-section">
+         <li><a href="procedimiento_de_creacin_de_paquetes_y_metapaquetes.html" class="no-ch">Procedimiento de creación de paquetes y metapaquetes</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_metapaquete.html" class="no-ch">Ejemplo de creación de un metapaquete</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_paquete.html" class="no-ch">Ejemplo de creación de un paquete</a></li>
+         <li><a href="actividad_24.html" class="no-ch">Actividad 24</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_de_paquetes_desde_cdigo_fuente_utilizando_checkinstall.html" class="daddy">Crear de paquetes desde código fuente utilizando checkinstall</a>
+      <ul class="other-section">
+         <li><a href="ejemplo_prctico_crear_el_paquete_megatools.html" class="no-ch">Ejemplo práctico: Crear el paquete megatools</a></li>
+         <li><a href="actividad_25.html" class="no-ch">Actividad 25</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_paquetes_binarios_y_metapaquetes_utilizando_debreate.html" class="daddy">Crear paquetes binarios y metapaquetes utilizando debreate</a>
+      <ul class="other-section">
+         <li><a href="instalar_debreate.html" class="no-ch">Instalar Debreate</a></li>
+         <li><a href="actividad_26.html" class="no-ch">Actividad 26</a></li>
+         <li><a href="crear_metapaquetes_utilizando_debreate.html" class="no-ch">Crear metapaquetes utilizando debreate</a></li>
+         <li><a href="actividad_27.html" class="no-ch">Actividad 27</a></li>
+         <li><a href="crear_paquetes_binarios_utilizando_debreate.html" class="no-ch">Crear paquetes binarios utilizando debreate</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_repositorio_local.html" class="daddy">Creación y gestión de un repositorio local</a>
+   <ul class="other-section">
+      <li><a href="generar_un_par_de_claves_para_asegurar_repositorio.html" class="daddy">Generar un par de claves para asegurar repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_28.html" class="no-ch">Actividad 28</a></li>
+      </ul>
+      </li>
+      <li><a href="instalar_y_configurar_reprepro.html" class="daddy">Instalar y configurar reprepro</a>
+      <ul class="other-section">
+         <li><a href="actividad_29.html" class="no-ch">Actividad 29</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_paquetes_al_repositorio.html" class="daddy">Añadir paquetes al repositorio</a>
+      <ul class="other-section">
+         <li><a href="el_script_addtorepository.html" class="no-ch">El script add-to-repository</a></li>
+         <li><a href="actividad_30.html" class="no-ch">Actividad 30</a></li>
+      </ul>
+      </li>
+      <li><a href="listar_paquetes_en_el_repositorio.html" class="daddy">Listar paquetes en el repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_31.html" class="no-ch">Actividad 31</a></li>
+      </ul>
+      </li>
+      <li><a href="eliminar_paquetes_del_repositorio.html" class="no-ch">Eliminar paquetes del repositorio</a></li>
+      <li><a href="aadir_el_repositorio_local_a_nuestros_clientes.html" class="daddy">Añadir el repositorio local a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_32.html" class="no-ch">Actividad 32</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_mirror_local.html" class="daddy">Creación y gestión de un mirror local</a>
+   <ul class="other-section">
+      <li><a href="instalacin_y_configuracin_de_aptmirror.html" class="no-ch">Instalación y configuración de apt-mirror</a></li>
+      <li><a href="iniciar_y_detener_la_construccin_del_mirror.html" class="no-ch">Iniciar y detener la construcción del mirror</a></li>
+      <li><a href="configurar_aptmirror_para_mirrorizar_repositorios_ubuntu.html" class="daddy">Configurar apt-mirror para mirrorizar repositorios Ubuntu</a>
+      <ul class="other-section">
+         <li><a href="actividad_33.html" class="no-ch">Actividad 33</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_el_mirror_a_nuestros_clientes.html" class="daddy">Añadir el mirror a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_34.html" class="no-ch">Actividad 34</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_una_entrada_dns_en_el_servidor.html" class="no-ch">Crear una entrada DNS en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_1_grabar_sesiones_de_terminal.html" class="no-ch">Anexo 1. Grabar sesiones de terminal</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="actividad_7.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="aadir_un_nuevo_repositorio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Gestionar los repositorios de nuestra distribución</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id162">
+<div class="iDevice emphasis0" >
+<div id="ta162_194_2" class="block iDevice_content">
+<div class="exe-text"><p>Podemos añadir nuevos repositorios a nuestro sistema en dos lugares:</p>
+<ul>
+<li>Dentro del archivo <strong>/etc/apt/sources.list</strong></li>
+<li>En archivos ubicados dentro del directorio <strong>/etc/apt/sources.list.d/</strong></li>
+</ul>
+<p>Si echáis un vistazo al archivo <strong>/etc/apt/sources.list</strong> de la máquina virtual que hemos instalado, contiene los repositorios de la distribución:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">deb http://es.archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse</span><br /><span style="font-family: terminal, monaco, monospace;">deb http://es.archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse</span><br /><span style="font-family: terminal, monaco, monospace;">deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse</span></td>
+</tr>
+</tbody>
+</table>
+<p>Podéis añadir nuevos repositorios a este archivo. Por ejemplo:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">deb http://es.archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse</span><br /><span style="font-family: terminal, monaco, monospace;">deb http://es.archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse</span><br /><span style="font-family: terminal, monaco, monospace;">deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse</span><br /><span style="font-family: terminal, monaco, monospace;">deb http://es.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse</span></td>
+</tr>
+</tbody>
+</table>
+<p>No obstante, nuestra recomendación es que añadáis vuestros nuevos repositorios en diferentes ficheros con extensión <strong>.list</strong> dentro del directorio <strong>/etc/apt/sources.list.d/</strong>.</p>
+<p>Es <strong>importante</strong> destacar que <strong>no todos</strong> los ficheros del directorio<span> </span><strong>/etc/apt/sources.list.d/</strong><span> </span>son utilizados por<span> </span><strong>apt, apt-get o aptitude</strong>. Algunos de ellos son ignorados.</p>
+<p>Si queréis saber qué ficheros del directorio<span> </span><strong>/etc/apt/sources.list.d/</strong><span> </span>son ignorados, no tenéis nada más que ejecutar la siguiente combinación de comandos:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ apt-config dump | grep Dir::Ignore-Files-Silently::</span></td>
+</tr>
+</tbody>
+</table>
+<p>Así veréis la lista de ficheros ignorados mediante patrones:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "~$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.disabled$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.bak$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.dpkg-[a-z]+$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.ucf-[a-z]+$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.save$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.orig$";</span><br /><span style="font-family: terminal, monaco, monospace;">Dir::Ignore-Files-Silently:: "\.distUpgrade$";</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Observando la salida del comando, ya sabéis por qué, por ejemplo, los ficheros <strong>.save</strong> que hay en el directorio <strong>/etc/apt/sources.list.d/</strong> son ignorados al realizar una actualización de paquetes.</p>
+<p>Por supuesto, si querés que en un momento determinado un repositorio, sea ignorado, podéis agregar al nombre del archivo cualquiera de las extensiones listadas anteriormente.</p>
+<p>A continuación, vamos a ver ejemplos de cómo <strong>añadir repositorios</strong> a nuestro ordenador.</p>
+<p>Pero, ¿<strong>qué es un repositorio</strong>? A efectos prácticos, podemos decir que un <span>repositorio es un lugar que aloja una colección de paquetes.</span><br /><span></span></p>
+<p><span>En Ubuntu podemos distinguir <strong>dos tipos</strong> de repositorios de paquetes:</span></p>
+<ul>
+<li><span>Repositorios oficiales, como por ejemplo, los de Ubuntu, VirtualBox, Google, etc...</span></li>
+<li><span>Repositorios personales (<strong>ppa</strong>: Personal Package Archive) que permiten a cualquiera distribuir paquetes usando un repositorio propio. <a href="https://launchpad.net/">Launchpad</a> es una plataforma gratuita de desarrollo de software, mantenida por Canonical, en la que podéis crear vuestro propio repositorio personal.</span></li>
+</ul>
+<p></p></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="actividad_7.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="aadir_un_nuevo_repositorio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

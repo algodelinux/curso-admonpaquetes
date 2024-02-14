@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Procedimiento de creación de paquetes y metapaquetes | Administración de paquetes en sistemas basados en Debian </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="enavas@algodelinux.com" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-251"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Administración de paquetes en sistemas basados en Debian</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Administración de paquetes en una red de equipos Ubuntu/Debian</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="preparacin_del_entorno_de_trabajo.html" class="daddy">Preparación del entorno de trabajo</a>
+   <ul class="other-section">
+      <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox.html" class="daddy">Instalación de VirtualBox</a>
+      <ul class="other-section">
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+         <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+         <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+      </ul>
+      </li>
+      <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+      <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+      <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+      <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+      <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+      <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+      <li><a href="crear_una_mquina_virtual.html" class="no-ch">Crear una máquina virtual</a></li>
+      <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+      <li><a href="clonar_una_mquina_virtual.html" class="no-ch">Clonar una máquina virtual</a></li>
+      <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+   </ul>
+   </li>
+   <li><a href="instalacin_mnima_de_xubuntu.html" class="daddy">Instalación mínima de Xubuntu</a>
+   <ul class="other-section">
+      <li><a href="requisitos_para_instalar_xubuntu.html" class="no-ch">Requisitos para instalar Xubuntu</a></li>
+      <li><a href="descarga_de_xubuntu.html" class="no-ch">Descarga de Xubuntu</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_utilizando_dd.html" class="no-ch">Crear un pendrive de instalación de Xubuntu utilizando dd</a></li>
+      <li><a href="crear_un_pendrive_de_instalacin_de_xubuntu_usando_etcher.html" class="no-ch">Crear un pendrive de instalación de Xubuntu usando Etcher</a></li>
+      <li><a href="instalacin_de_xubuntu_desktop.html" class="no-ch">Instalación de Xubuntu Desktop</a></li>
+      <li><a href="actividad_5.html" class="no-ch">Actividad 5</a></li>
+      <li><a href="configurar_acceso_remoto_mediante_ssh.html" class="no-ch">Configurar acceso remoto mediante ssh</a></li>
+      <li><a href="actividad_6.html" class="no-ch">Actividad 6</a></li>
+      <li><a href="paquetes_para_configurar_un_escritorio_educativo.html" class="daddy">Paquetes para configurar un "escritorio educativo"</a>
+      <ul class="other-section">
+         <li><a href="el_paquete_linexxubuntucore.html" class="no-ch">El paquete linex-xubuntu-core</a></li>
+         <li><a href="el_paquete_linexconfigldapclient.html" class="no-ch">El paquete linex-config-ldapclient</a></li>
+         <li><a href="el_paquete_linexubuntupuppet.html" class="no-ch">El paquete linex-ubuntu-puppet</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="gestin_automatizada_de_paquetes.html" class="daddy">Gestión automatizada de paquetes</a>
+   <ul class="other-section">
+      <li><a href="gestin_de_paquetes_mediante_apt.html" class="daddy">Gestión de paquetes mediante apt</a>
+      <ul class="other-section">
+         <li><a href="actividad_7.html" class="no-ch">Actividad 7</a></li>
+      </ul>
+      </li>
+      <li><a href="gestionar_los_repositorios_de_nuestra_distribucin.html" class="daddy">Gestionar los repositorios de nuestra distribución</a>
+      <ul class="other-section">
+         <li><a href="aadir_un_nuevo_repositorio.html" class="no-ch">Añadir un nuevo repositorio</a></li>
+         <li><a href="eliminar_un_repositorio.html" class="no-ch">Eliminar un repositorio</a></li>
+         <li><a href="aadir_un_repositorio_personal.html" class="no-ch">Añadir un repositorio personal</a></li>
+         <li><a href="eliminar_el_repositorio_personal.html" class="no-ch">Eliminar el repositorio personal</a></li>
+         <li><a href="actividad_8.html" class="no-ch">Actividad 8</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_actualizaciones_mediante_unattendedupgrades.html" class="daddy">Gestión de actualizaciones mediante unattended-upgrades</a>
+      <ul class="other-section">
+         <li><a href="aadir_repositorios_a_unattendedupgrades.html" class="no-ch">Añadir repositorios a unattended-upgrades</a></li>
+         <li><a href="aadir_ppa_a_unattendedupgrades.html" class="no-ch">Añadir ppa a unattended-upgrades</a></li>
+         <li><a href="bloquear_la_actualizacin_de_paquetes.html" class="no-ch">Bloquear la actualización de paquetes</a></li>
+         <li><a href="otras_opciones_de_configuracin.html" class="no-ch">Otras opciones de configuración</a></li>
+         <li><a href="configurar_unattendedupgrades_para_enviar_un_email_cuando_se_produzca_un_error.html" class="no-ch">Configurar unattended-upgrades para enviar un email cuando se produzca un error</a></li>
+         <li><a href="comprobar_que_se_estn_realizando_las_actualizaciones.html" class="no-ch">Comprobar que se están realizando las actualizaciones</a></li>
+         <li><a href="cmo_se_inicia_unattendedupgrades.html" class="daddy">¿Cómo se inicia unattended-upgrades?</a>
+         <ul class="other-section">
+            <li><a href="el_fichero_etcaptaptconfd10periodic.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/10periodic</a></li>
+            <li><a href="el_fichero__etcaptaptconfd20autoupgrades.html" class="no-ch">El fichero  /etc/apt/apt.conf.d/20auto-upgrades</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_9.html" class="no-ch">Actividad 9</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_paquetes_mediante_puppet.html" class="daddy">Gestión de paquetes mediante puppet</a>
+      <ul class="other-section">
+         <li><a href="el_recurso_package.html" class="no-ch">El recurso package</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_instalado.html" class="no-ch">Asegurar que un paquete se encuentre instalado</a></li>
+         <li><a href="asegurar_que_un_paquete_se_encuentre_desinstalado.html" class="no-ch">Asegurar que un paquete se encuentre desinstalado</a></li>
+         <li><a href="gestionar_un_conjunto_de_paquetes.html" class="no-ch">Gestionar un conjunto de paquetes</a></li>
+         <li><a href="actividad_10.html" class="no-ch">Actividad 10</a></li>
+      </ul>
+      </li>
+      <li><a href="gestin_de_paquetes_mediante_pkgsync.html" class="daddy">Gestión de paquetes mediante pkgsync</a>
+      <ul class="other-section">
+         <li><a href="funcionamiento.html" class="no-ch">Funcionamiento</a></li>
+         <li><a href="cundo_y_cmo_se_ejecuta_pkgsync.html" class="no-ch">¿Cuándo y cómo se ejecuta pkgsync?</a></li>
+         <li><a href="gua_de_estilo.html" class="no-ch">Guía de estilo</a></li>
+         <li><a href="instalacin_de_pkgsync.html" class="no-ch">Instalación de pkgsync</a></li>
+         <li><a href="actividad_11.html" class="no-ch">Actividad 11</a></li>
+         <li><a href="creacin_de_listas_de_paquetes.html" class="no-ch">Creación de listas de paquetes</a></li>
+         <li><a href="actividad_12.html" class="no-ch">Actividad 12</a></li>
+         <li><a href="creacin_de_listas_musthave_en_etcpkgsyncmusthaved.html" class="no-ch">Creación de listas musthave en /etc/pkgsync/musthave.d</a></li>
+         <li><a href="actividad_13.html" class="no-ch">Actividad 13</a></li>
+         <li><a href="creacin_de_listas_mayhave_en_etcpkgsyncmayhaved.html" class="no-ch">Creación de listas mayhave en /etc/pkgsync/mayhave.d</a></li>
+         <li><a href="actividad_14.html" class="no-ch">Actividad 14</a></li>
+         <li><a href="creacin_de_listas_maynothave_en_etcpkgsyncmaynothaved.html" class="no-ch">Creación de listas maynothave en /etc/pkgsync/maynothave.d</a></li>
+         <li><a href="actividad_15.html" class="no-ch">Actividad 15</a></li>
+         <li><a href="minimizar_el_fichero_etcpkgsyncmusthave.html" class="no-ch">Minimizar el fichero /etc/pkgsync/musthave</a></li>
+         <li><a href="actividad_16.html" class="no-ch">Actividad 16</a></li>
+         <li><a href="limpiar_ficheros_de_pkgsync.html" class="no-ch">Limpiar ficheros de pkgsync</a></li>
+         <li><a href="actividad_17.html" class="no-ch">Actividad 17</a></li>
+         <li><a href="configuracin_del_comportamiento_por_defecto_de_pkgsync.html" class="daddy">Configuración del comportamiento por defecto de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="variables_que_podemos_modificar.html" class="no-ch">Variables que podemos modificar</a></li>
+         </ul>
+         </li>
+         <li><a href="parmetros_de_pkgsync.html" class="daddy">Parámetros de pkgsync</a>
+         <ul class="other-section">
+            <li><a href="uso_desde_la_lnea_de_comandos.html" class="no-ch">Uso desde la línea de comandos</a></li>
+         </ul>
+         </li>
+         <li><a href="actividad_18.html" class="no-ch">Actividad 18</a></li>
+         <li><a href="inicio_de_pkgsync_desde_el_terminal_tty12.html" class="no-ch">Inicio de pkgsync desde el terminal tty12</a></li>
+         <li><a href="instalacin_del_mdulo_puppetlabsapt.html" class="no-ch">Instalación del módulo puppetlabs-apt</a></li>
+         <li><a href="actividad_19.html" class="no-ch">Actividad 19</a></li>
+         <li><a href="gestin_de_paquetes_y_repositorios_mediante_el_mdulo_puppet_pkgsync.html" class="daddy">Gestión de paquetes y repositorios mediante el módulo puppet pkgsync</a>
+         <ul class="other-section">
+            <li><a href="initpp.html" class="no-ch">init.pp</a></li>
+            <li><a href="sourcespp.html" class="no-ch">sources.pp</a></li>
+         </ul>
+         </li>
+         <li><a href="buscar_insertar_y_eliminar_nombres_de_paquetes_en_los_ficheros_de_pkgsync.html" class="no-ch">Buscar, insertar y eliminar nombres de paquetes en los ficheros de pkgsync</a></li>
+         <li><a href="actividad_20.html" class="no-ch">Actividad 20</a></li>
+         <li><a href="otras_herramientas_incorporadas_en_el_paquete_pkgsync.html" class="no-ch">Otras herramientas incorporadas en el paquete pkgsync</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="creacin_bsica_de_paquetes_y_metapaquetes.html" class="current-page-parent daddy">Creación básica de paquetes y metapaquetes</a>
+   <ul>
+      <li><a href="crear_las_variables_debemail_y_debfullname_y_agregarlas_al_fichero_bashrc.html" class="no-ch">Crear las variables DEBEMAIL y DEBFULLNAME y agregarlas al fichero ~/.bashrc</a></li>
+      <li><a href="herramientas.html" class="daddy">Herramientas</a>
+      <ul class="other-section">
+         <li><a href="dpkg.html" class="no-ch">dpkg</a></li>
+         <li><a href="aptfile.html" class="no-ch">apt-file</a></li>
+         <li><a href="fakeroot.html" class="no-ch">fakeroot</a></li>
+         <li><a href="devscripts.html" class="no-ch">devscripts</a></li>
+         <li><a href="actividad_21.html" class="no-ch">Actividad 21</a></li>
+      </ul>
+      </li>
+      <li><a href="relaciones_entre_paquetes.html" class="no-ch">Relaciones entre paquetes</a></li>
+      <li><a href="reempaquetar_paquetes_utilizando_dpkgrepack.html" class="daddy">Reempaquetar paquetes utilizando dpkg-repack</a>
+      <ul class="other-section">
+         <li><a href="actividad_22.html" class="no-ch">Actividad 22</a></li>
+      </ul>
+      </li>
+      <li><a href="manipular_paquetes_utilizando_dpkgdeb.html" class="daddy">Manipular paquetes utilizando dpkg-deb</a>
+      <ul class="other-section">
+         <li><a href="desempaquetar_un_paquete.html" class="no-ch">Desempaquetar un paquete</a></li>
+         <li><a href="empaquetar_un_paquete.html" class="no-ch">Empaquetar un paquete</a></li>
+         <li><a href="actividad_23.html" class="no-ch">Actividad 23</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="crear_paquetes_y_metapaquetes_utilizando_equivs.html" class="current-page-parent daddy">Crear paquetes y metapaquetes utilizando equivs</a>
+      <ul>
+         <li id="active"><a href="procedimiento_de_creacin_de_paquetes_y_metapaquetes.html" class="active no-ch">Procedimiento de creación de paquetes y metapaquetes</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_metapaquete.html" class="no-ch">Ejemplo de creación de un metapaquete</a></li>
+         <li><a href="ejemplo_de_creacin_de_un_paquete.html" class="no-ch">Ejemplo de creación de un paquete</a></li>
+         <li><a href="actividad_24.html" class="no-ch">Actividad 24</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_de_paquetes_desde_cdigo_fuente_utilizando_checkinstall.html" class="daddy">Crear de paquetes desde código fuente utilizando checkinstall</a>
+      <ul class="other-section">
+         <li><a href="ejemplo_prctico_crear_el_paquete_megatools.html" class="no-ch">Ejemplo práctico: Crear el paquete megatools</a></li>
+         <li><a href="actividad_25.html" class="no-ch">Actividad 25</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_paquetes_binarios_y_metapaquetes_utilizando_debreate.html" class="daddy">Crear paquetes binarios y metapaquetes utilizando debreate</a>
+      <ul class="other-section">
+         <li><a href="instalar_debreate.html" class="no-ch">Instalar Debreate</a></li>
+         <li><a href="actividad_26.html" class="no-ch">Actividad 26</a></li>
+         <li><a href="crear_metapaquetes_utilizando_debreate.html" class="no-ch">Crear metapaquetes utilizando debreate</a></li>
+         <li><a href="actividad_27.html" class="no-ch">Actividad 27</a></li>
+         <li><a href="crear_paquetes_binarios_utilizando_debreate.html" class="no-ch">Crear paquetes binarios utilizando debreate</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_repositorio_local.html" class="daddy">Creación y gestión de un repositorio local</a>
+   <ul class="other-section">
+      <li><a href="generar_un_par_de_claves_para_asegurar_repositorio.html" class="daddy">Generar un par de claves para asegurar repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_28.html" class="no-ch">Actividad 28</a></li>
+      </ul>
+      </li>
+      <li><a href="instalar_y_configurar_reprepro.html" class="daddy">Instalar y configurar reprepro</a>
+      <ul class="other-section">
+         <li><a href="actividad_29.html" class="no-ch">Actividad 29</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_paquetes_al_repositorio.html" class="daddy">Añadir paquetes al repositorio</a>
+      <ul class="other-section">
+         <li><a href="el_script_addtorepository.html" class="no-ch">El script add-to-repository</a></li>
+         <li><a href="actividad_30.html" class="no-ch">Actividad 30</a></li>
+      </ul>
+      </li>
+      <li><a href="listar_paquetes_en_el_repositorio.html" class="daddy">Listar paquetes en el repositorio</a>
+      <ul class="other-section">
+         <li><a href="actividad_31.html" class="no-ch">Actividad 31</a></li>
+      </ul>
+      </li>
+      <li><a href="eliminar_paquetes_del_repositorio.html" class="no-ch">Eliminar paquetes del repositorio</a></li>
+      <li><a href="aadir_el_repositorio_local_a_nuestros_clientes.html" class="daddy">Añadir el repositorio local a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_32.html" class="no-ch">Actividad 32</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="creacin_y_gestin_de_un_mirror_local.html" class="daddy">Creación y gestión de un mirror local</a>
+   <ul class="other-section">
+      <li><a href="instalacin_y_configuracin_de_aptmirror.html" class="no-ch">Instalación y configuración de apt-mirror</a></li>
+      <li><a href="iniciar_y_detener_la_construccin_del_mirror.html" class="no-ch">Iniciar y detener la construcción del mirror</a></li>
+      <li><a href="configurar_aptmirror_para_mirrorizar_repositorios_ubuntu.html" class="daddy">Configurar apt-mirror para mirrorizar repositorios Ubuntu</a>
+      <ul class="other-section">
+         <li><a href="actividad_33.html" class="no-ch">Actividad 33</a></li>
+      </ul>
+      </li>
+      <li><a href="aadir_el_mirror_a_nuestros_clientes.html" class="daddy">Añadir el mirror a nuestros clientes</a>
+      <ul class="other-section">
+         <li><a href="actividad_34.html" class="no-ch">Actividad 34</a></li>
+      </ul>
+      </li>
+      <li><a href="crear_una_entrada_dns_en_el_servidor.html" class="no-ch">Crear una entrada DNS en el servidor</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_1_grabar_sesiones_de_terminal.html" class="no-ch">Anexo 1. Grabar sesiones de terminal</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="crear_paquetes_y_metapaquetes_utilizando_equivs.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejemplo_de_creacin_de_un_metapaquete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Procedimiento de creación de paquetes y metapaquetes</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id268">
+<div class="iDevice emphasis0" >
+<div id="ta268_268_2" class="block iDevice_content">
+<div class="exe-text"><p class="standard" id="magicparlabel-4744">Tanto si vamos a crear un paquete como un metapaquete, lo primero que debemos hacer es <strong>crear un directorio</strong> de trabajo en nuestro directorio home, por ejemplo:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ mkdir -p nombredelpaquete/debian</span></td>
+</tr>
+</tbody>
+</table>
+<p>Con el parámetro <strong>-p</strong> estamos creando un directorio con el nombre del paquete y, a la vez, el subdirectorio "<strong>debian</strong>" donde se alojan los ficheros que nos permitirán gestionar el paquete, entre ellos, el fichero de control.</p>
+<p>A continuación, entramos dentro del directorio del paquete:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ cd nombredelpaquete</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard" id="magicparlabel-4770">Y creamos un archivo de control mediante el comando <b>equivs-control</b>:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ equivs-control debian/control</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard" id="magicparlabel-6689">Al ejecutar el comando anterior estaremos creando un fichero de control a partir de una plantilla. Este fichero de control tendremos que modificarlo para que el paquete instale todo aquello que nosotros indiquemos.</p>
+<p class="standard">Una vez creado, lo editamos:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ nano debian/control</span></td>
+</tr>
+</tbody>
+</table>
+<p>Lo que veréis será algo como ésto:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p><span style="font-family: terminal, monaco, monospace;">### Commented entries have reasonable defaults.</span><br /><span style="font-family: terminal, monaco, monospace;">### Uncomment to edit them.</span><br /><span style="font-family: terminal, monaco, monospace;"># Source: &lt;source package name; defaults to package name&gt;</span><br /><span style="font-family: terminal, monaco, monospace;">Section: misc</span><br /><span style="font-family: terminal, monaco, monospace;">Priority: optional</span><br /><span style="font-family: terminal, monaco, monospace;"># Homepage: &lt;enter URL here; no default&gt;</span><br /><span style="font-family: terminal, monaco, monospace;">Standards-Version: 3.9.2</span></p>
+<p><span style="font-family: terminal, monaco, monospace;">Package: &lt;package name; defaults to equivs-dummy&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Version: &lt;enter version here; defaults to 1.0&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Maintainer: Your Name &lt;yourname@example.com&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Pre-Depends: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Depends: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Recommends: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Suggests: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Provides: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Replaces: &lt;comma-separated list of packages&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Architecture: all</span><br /><span style="font-family: terminal, monaco, monospace;"># Multi-Arch: &lt;one of: foreign|same|allowed&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Copyright: &lt;copyright file; defaults to GPL2&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Changelog: &lt;changelog file; defaults to a generic changelog&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Readme: &lt;README.Debian file; defaults to a generic one&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Extra-Files: &lt;comma-separated list of additional files for the doc directory&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Links: &lt;pair of space-separated paths; First is path symlink points at, second is filename of link&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># Files: &lt;pair of space-separated paths; First is file to include, second is destination&gt;</span><br /><span style="font-family: terminal, monaco, monospace;"># &lt;more pairs, if there's more than one file to include. Notice the starting space&gt;</span><br /><span style="font-family: terminal, monaco, monospace;">Description: &lt;short description; defaults to some wise words&gt;</span><br /><span style="font-family: terminal, monaco, monospace;">long description and info</span><br /><span style="font-family: terminal, monaco, monospace;">.</span><br /><span style="font-family: terminal, monaco, monospace;">second paragraph</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="standard" id="magicparlabel-6881">Como podéis ver, prácticamente todas las entradas vienen comentadas y tan sólo una mínima parte se encuentra sin comentar. En este archivo modificaremos aquellas entradas que necesitemos. </p>
+<p>En la línea donde pone <strong>Section</strong>: especificamos la sección a la que pertenece el paquete. Existen una serie de secciones predefinidas: <strong>admin, cli-mono, comm, database, debug, devel, doc, editors, education, electronics, embedded, fonts, games, gnome, gnu-r, gnustep, graphics, hamradio, haskell, httpd, interpreters, introspection, java, kde, kernel, libdevel, libs, lisp, localization, mail, math, metapackages, misc, net, news, ocaml, oldlibs, otherosfs, perl, php, python, ruby, science, shells, sound, tasks, tex, text, utils, vcs, video, web, x11, xfce, zope.</strong></p>
+<p>En la línea donde pone <b>Package:</b> tenemos que escribir el nombre del paquete.</p>
+<p>En la línea donde pone <b>Version:</b> especificamos la versión del paquete.</p>
+<p>Si queremos que nuestro paquete instale otros paquetes, en la línea <b>Depends:</b> tendríamos que escribir la lista de nombres de paquetes que queremos que se instalen, separados por comas.</p>
+<p>En la línea <b>Architecture:</b> tendremos que especificar la arquitectura para la que se crea el paquete:</p>
+<ul>
+<li><strong>amd64</strong>: Para sistemas operativos de 64 bits.</li>
+<li><strong>i386</strong>: Para sistemas operativos de 32 bits.</li>
+<li><strong>all</strong>: Para cualquier arquitectura.</li>
+</ul>
+<p>Es importante destacar que hoy el día, la mayor parte de las máquinas son de 64 bits y que en un sistema de 64 bits podemos instalar tanto paquetes de 64 bits como de 32 bits.</p>
+<p>Por otro lado, si nuestro paquete necesitara que antes de instalarse, se encontraran instalados otros paquetes, utilizaríamos <strong>Pre-Depends: </strong> Por ejemplo: Si nuestro paquete necesitara tener previamente instalado el paquete fuse, lo indicaríamos así: <strong>Pre-Depends: fuse</strong><strong></strong></p>
+<p><span>En la línea </span><b>Replaces:</b> podemos indicar que un paquete "reemplaza" a otros. Ésto significa que los archivos instalados por el paquete sustituyen a los archivos de los paquetes que se enumeran.</p>
+<p>En la línea "<b>Changelog: debian/changelog</b>" indicamos a equivs dónde debe localizar el fichero changelog. En este ejemplo en el  subdirectorio <b>debian/changelog</b>.</p>
+<p>El fichero <strong>changelog</strong> contiene la lista de cambios realizados en el paquete en cada versión.</p>
+<p class="standard"><span>Para crear el fichero </span><b>changelog</b><span> en el directorio debian, estando dentro del directorio del paquete, utilizaremos la herramienta <strong>dch</strong>:</span><strong></strong></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ dch --create --distribution jammy --package nombredelpaquete --newversion 1.0 "First version"</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>En el ejemplo anterior hemos creado un registro de cambios para un paquete cuya distribución es Ubuntu Jammy. Con el parámetro <strong>--newversion</strong> indicamos el número de versión inicial del paquete y entre comillas escribimos los cambios que hemos realizado en la versión especificada.</span></p>
+<p class="standard"><span>Siguendo con el ejemplo, si estando dentro del directorio del paquete, echáis un vistazo al archivo <strong>debian/changelog</strong>, veréis que tendrá un contenido como el siguiente:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;">
+<p>paquete (1.0) jammy; urgency=medium</p>
+<p>* First version</p>
+<p>-- Esteban M. Navas Martín &lt;algodelinux@gmail.com&gt; Sun, 20 Aug 2023 13:57:58 +0200</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>Recordad que <strong>dch</strong> obtiene el nombre del creador del paquete y la dirección de e-mail de las variables <strong>DEBFULLNAME</strong> y <strong>DEBEMAIL</strong> definidas dentro del fichero <strong>~/.bashrc</strong></span></p>
+<p class="standard"><span>Utilizaremos el parámetro <strong>--create</strong> tan sólo la primera vez que creamos el registro de cambios. Cuando realicemos modificaciones en el paquete, lo que haremos será incrementar el número de versión. Para ello, utilizaremos el parámetro <strong>--increment</strong>:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ dch --increment "Modified to replace files" --distribution jammy</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>Es <strong>importante</strong> recordar que, cuando incrementemos la versión del paquete con <strong>dch</strong> en el fichero <strong>changelog</strong>, también tendremos que reflejar el cambio de versión en el fichero de <strong>control</strong>.</span></p>
+<p class="standard"><span>Veamos algunos detalles más...</span></p>
+<p class="standard"><span>La línea que dice "</span><b>Links:</b><span>" sirve para crear enlaces. El formato para especificar la creación de un enlace es el mismo que cuando creamos un enlace simbólico con el comando <strong>ln</strong>: Primero se especifica el destino y, a continuación, el enlace. Añadiremos una línea para cada enlace que creemos. Además, es importante destacar que cada nueva línea que cree un link después de la primera, debe ir sangrada.</span></p>
+<p class="standard">Por ejemplo:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   Links: /usr/share/linex-taskbar-config/default.xml /etc/xdg/xdg-xubuntu/xfce4/panel/default.xml</span><br /><span style="font-family: terminal, monaco, monospace;">    /usr/share/linex-taskbar-config/default.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>En cuanto a la línea que dice "</span><b>Files:</b><span>", nos permite colocar ficheros en la máquina donde se instala el paquete. El formato es el siguiente:</span></p>
+<p class="standard"><span> <strong>Primero</strong> se indica el fichero que queremos colocar, y, <strong>a continuación</strong> el directorio de la máquina donde se debe ubicar al instalar el paquete.</span></p>
+<p class="standard"><span>A la hora de distribuir ficheros mediante equivs, es <strong>importante</strong> tener en cuenta <strong>dónde los colocamos</strong>. Para que lo entendáis mejor, vamos a ver unos ejemplos:</span></p>
+<p><span>Si queremos que nuestro paquete coloque el fichero <strong>linex-icon.png</strong> en el directorio </span><strong>/usr/share/icons/hicolor/48x48/categories/</strong><span> y colocamos el fichero <strong>linex-icon.png</strong> directamente en el directorio de trabajo donde estamos creando el paquete: <strong>linex-taskbar-config</strong>), en la línea <strong>Files:</strong> debemos especificarlo así:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   Files: linex-icon.png /usr/share/icons/hicolor/48x48/categories/</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>Si además del fichero anterior, queremos que nuestro paquete coloque el fichero <strong>defaults.xml</strong> en el directorio</span><strong> /usr/share/linex-taskbar-config/</strong><span> y colocamos el fichero <strong>defaults.xml</strong> directamente en el directorio de trabajo donde estamos creando el paquete: <strong>linex-taskbar-config</strong>), en la línea <strong>Files:</strong> debemos especificarlo así:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   Files: linex-icon.png /usr/share/icons/hicolor/48x48/categories/</span><br /><span style="font-family: terminal, monaco, monospace;">    default.xml /usr/share/linex-taskbar-config/</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>Recordad que cada nueva línea que especifique un fichero después de la primera, debe ir sangrada, tal y como se ve en el ejemplo anterior.</span></p>
+<p><span>Ahora bien, si queremos que nuestro paquete coloque el fichero <strong>linex-icon.png</strong> en el directorio </span><strong>/usr/share/icons/hicolor/48x48/categories/</strong><span> y colocamos el fichero <strong>linex-icon.png</strong> en una ruta dentro del directorio de trabajo donde estamos creando el paquete: <strong>linex-taskbar-config/usr/share/icons/hicolor/48x48/categories/</strong>), en la línea <strong>Files:</strong> tenemos que especificarlo así:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   Files: usr/share/icons/hicolor/48x48/categories/linex-icon.png /</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>Si además del fichero anterior, queremos que nuestro paquete coloque el fichero <strong>defaults.xml</strong> en el directorio</span><strong> /usr/share/linex-taskbar-config/</strong><span> y colocamos el fichero <strong>defaults.xml</strong> en una ruta dentro del directorio de trabajo donde estamos creando el paquete: <strong>linex-taskbar-config/usr/share/linex-taskbar-config/</strong>), en la línea <strong>Files:</strong> tenemos que especificarlo así:</span></p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   Files: usr/share/icons/hicolor/48x48/categories/linex-icon.png /</span><br /><span style="font-family: terminal, monaco, monospace;">    usr/share/linex-taskbar-config/default.xml /</span></td>
+</tr>
+</tbody>
+</table>
+<p class="standard"><span>Recordad que cada nueva línea que especifique un fichero después de la primera, debe ir sangrada, tal y como se ve en el ejemplo anterior.</span></p>
+<p class="standard"><span>Además de todas directivas anteriores podemos utilizar otras cuatro:</span></p>
+<ul>
+<li class="standard"><span>Preinst</span></li>
+<li class="standard"><span>Postinst</span></li>
+<li class="standard"><span>Prerm</span></li>
+<li class="standard"><span>Postrm</span></li>
+</ul>
+<p class="standard"><span>Si en el fichero de control introducimos una línea como la siguiente: "</span><b>Preinst: debian/preinst</b><span>", estamos indicando que el paquete utiliza un script cuyo nombre es <strong>preinst</strong>. Al introducirlo con la directiva <strong>Preinst</strong>, el sistema de paquetes hará que el script se ejecute antes de instalar el paquete. Es importante destacar que para que el script <strong>preinst</strong> se pueda ejecutar, tendremos que copiarlo al subdirectorio <strong>debian</strong> del directorio donde estamos construyendo el paquete.</span></p>
+<p class="standard">Si en el fichero de control <span>introducimos una línea como la siguiente: "</span><b>Postinst: debian/postinst</b><span>", estamos indicando que el paquete utiliza un script cuyo nombre es <strong>postinst</strong>. Así, el sistema de paquetes hará que se ejecute el script <strong>postinst</strong> después de instalar el paquete. Naturalmente, para que el sistema de paquetes pueda ejecutarlo, tendremos que colocar el script <strong>postinst</strong> en el subdirectorio <strong>debian</strong> del directorio donde estamos construyendo el paquete.</span><br /><span></span></p>
+<p><span>Por otro lado, si en el fichero de control introducimos una línea con el siguiente contenido "</span><b>Prerm: debian/prerm</b><span>", el sistema de paquetes sabrá que debe ejecutar el script <strong>prerm</strong> antes de desinstalar el paquete. No olvidéis que tendremos que copiar dicho script al subdirectorio <strong>debian</strong> del paquete.</span></p>
+<p><span>Y, por último, si en el fichero de control introducimos una línea con el siguiente contenido "</span><b>Postrm: debian/postrm</b><span>", el sistema de paquetes sabrá que debe ejecutar el script <strong>postrm</strong> después de desinstalar el paquete. Lógicamente, también tendremos que copiar dicho script al subdirectorio <strong>debian</strong> del paquete.</span><br /><br /><span>Una vez creados el fichero de control, los scripts y colocados los ficheros en las ubicaciones desde donde se deben tomar para crear el paquete, tan sólo tendremos que ejecutar, <strong>desde el directorio del paquete</strong> binario, </span> ejecutamos <b>equivs-build</b> seguido del nombre del fichero de configuración y se creará nuestro paquete:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ equivs-build debian/control</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>Ahora bien, si en lugar del paquete binario, lo que queremos obtener es el paquete fuente,  </span>ejecutaremos <b>equivs-build</b> seguido del parámetro <strong>--source</strong> y el nombre del fichero de configuración:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ equivs-build --source debian/control</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>Y si queremos obtener tanto el paquete binario como el paquete fuente,  </span>ejecutaremos <b>equivs-build</b> seguido del parámetro <strong>--full</strong> y el nombre del fichero de configuración:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   $ equivs-build --full debian/control</span></td>
+</tr>
+</tbody>
+</table>
+<p></p></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="crear_paquetes_y_metapaquetes_utilizando_equivs.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejemplo_de_creacin_de_un_metapaquete.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
