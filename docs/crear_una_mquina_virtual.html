@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Crear una máquina virtual | Preparación del entorno de trabajo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Esteban M. Navas Martín" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-295"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Preparación del entorno de trabajo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Preparación del entorno de trabajo</a></li>
+   <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+   <li><a href="instalacin_de_virtualbox.html" class="daddy">Instalación de VirtualBox</a>
+   <ul class="other-section">
+      <li><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+      <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+   </ul>
+   </li>
+   <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+   <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+   <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+   <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+   <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+   <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+   <li id="active"><a href="crear_una_mquina_virtual.html" class="active no-ch">Crear una máquina virtual</a></li>
+   <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+   <li><a href="clonar_una_mquina_virtual.html" class="no-ch">Clonar una máquina virtual</a></li>
+   <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="actividad_2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_3.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Crear una máquina virtual</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_info" id="id559">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Procedimiento de creación de una máquina virtual</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta559_108_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Para crear una nueva máquina virtual, abrimos <strong>VirtualBox</strong>:</p>
+<p style="text-align: center;"><img src="crear-maquina-virtual1.png" alt="Crear una máquina virtual nueva" width="800" height="521" /></p>
+<ul>
+<li style="text-align: justify;">Hacemos clic en el botón "<strong>Nueva</strong>".</li>
+<li style="text-align: justify;">Pulsamos la combinación de teclas "<strong>Ctrl + N</strong>".</li>
+<li style="text-align: justify;">O hacemos clic en el menú "<strong>Máquina -&gt; Nueva</strong>".</li>
+</ul>
+<p style="text-align: justify;">Con ésto, iniciaremos un asistente de creación de máquinas virtuales:</p>
+<p><img src="crear-maquina-virtual2.png" alt="Seleccionar el sistema operativo" width="725" height="425" style="display: block; margin-left: auto; margin-right: auto;" /><br style="clear: both;" />En esta primera ventana:</p>
+<ul>
+<li>Tendremos que dar un nombre a la máquina virtual.</li>
+<li>Seleccionar en qué carpeta guardar la máquina o dejaremos la ubicación por defecto.</li>
+<li>Seleccionaremos el tipo de sistema operativo.</li>
+<li>Y elegiremos la versión que vamos a instalar. Podremos elegir una versión específica de Linux o, si no encontramos nuestra versión, una genérica, como por ejemplo: Linux 2.6 / 3.x /4.x (64-bit).</li>
+</ul>
+<p style="text-align: justify;">Una vez introducidos los datos, y seleccionadas las opciones, hacemos clic en el botón "<strong>Siguiente</strong>".</p>
+<p style="text-align: justify;">En el siguiente paso, tendremos que elegir la cantidad de memoria que queremos asignar a la máquina virtual:</p>
+<p style="text-align: justify;"><img src="crear-maquina-virtual3.png" alt="Elegir la cantidad de memoria de la máquina virtual" width="725" height="425" style="display: block; margin-left: auto; margin-right: auto;" /><br style="clear: both;" />Por defecto, en función de las opciones de sistema operativo y versión elegidas en la primera ventana, nos ofrecerá un <strong>tamaño de memoria recomendado</strong>, que podemos <strong>incrementar</strong> o <strong>reducir</strong>. Para este ejemplo, vamos a dejar el tamaño recomendado: 1GB.</p>
+<p style="text-align: justify;">No os preocupéis por la cantidad de memoria asignada a la máquina virtual durante el proceso de creación. Éste es un parámetro que <strong>podremos modificar</strong> posteriormente en <strong>cualquier momento</strong>. Es una de las ventajas de la virtualización.</p>
+<p style="text-align: justify;">Una vez elegida la cantidad de memoria RAM que queremos asignar a la máquina, tendremos que crear un disco duro virtual para nuestra máquina:</p>
+<p style="text-align: justify;"><img src="crear-maquina-virtual4.png" alt="Asignación de un disco duro para la máquina virtual" width="725" height="425" style="display: block; margin-left: auto; margin-right: auto;" /><br style="clear: both;" />Aquí tenemos varias posibilidades:</p>
+<ul>
+<li style="text-align: justify;"><strong>No añadir un disco duro</strong> virtual a la máquina. Esta opción puede ser útil para disponer de una máquina que inicia un sistema live o arranca por red.</li>
+<li style="text-align: justify;"><strong>Crear un disco duro virtual</strong> del tamaño recomendado (tamaño que podremos cambiar después).</li>
+<li style="text-align: justify;"><strong>Usar un archivo de disco duro virtual</strong> previamente creado. Si elegimos esta opción, podremos seleccionar cualquiera de los discos duros que hayamos creado en VirtualBox.</li>
+</ul>
+<p style="text-align: justify;">Como lo que nos interesa en este ejemplo es crear un nuevo disco duro virtual del tamaño recomendado, hacemos clic en el botón "<strong>Crear</strong>".</p>
+<p style="text-align: justify;">Al pulsar el botón "<strong>Crear</strong>", la siguiente ventana del asistente nos pedirá que seleccionemos el <strong>tipo de archivo</strong> del disco duro virtual:</p>
+<p><img src="crear-maquina-virtual5.png" alt="Seleccionar formato del disco duro virtual" width="800" height="483" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Nos ofrece tres posibilidades:</p>
+<ul>
+<li style="text-align: justify;"><strong>VDI</strong> (Virtual Disk Image): Es el formato propio de los discos duros de las máquinas virtuales de <strong>VirtualBox</strong>.</li>
+<li style="text-align: justify;"><strong>VMDK</strong>: Es un formato de disco duro virtual usado por otras herramientas de virtualización, como por ejemplo <strong>VMware</strong>.</li>
+<li><span class="bold"><strong>VHD.</strong></span><span> </span>Es el formato de disco duro virtual usado por las herramientas de virtualización de <strong>Microsoft</strong>.</li>
+</ul>
+<p style="text-align: justify;">Podemos elegir cualquiera de los formatos. Si habitualmente trabajamos con VirtualBox, podemos dejar la opción por defecto: <strong>VDI</strong>.</p>
+<p style="text-align: justify;">Cambiar el formato del archivo de disco duro virtual podría servirnos para utilizar el disco duro virtual con otras herramientas de virtualización.</p>
+<p style="text-align: justify;">Hacemos clic en el botón "<strong>Siguiente</strong>" y veremos una ventana como la siguiente:</p>
+<p style="text-align: justify;"><img src="crear-maquina-virtual6.png" alt="Elegir entre disco duro dinamico o de tamaño fijo" width="800" height="483" style="display: block; margin-left: auto; margin-right: auto;" /><br style="clear: both;" />Aquí tendremos que elegir si deseamos que el archivo de disco duro virtual <strong>crezca dinámicamente</strong> conforme se vaya usando. O si deseamos reservar un tamaño fijo. En la imagen anterior podéis ver las ventajas de cada opción.</p>
+<p style="text-align: justify;">La opción <strong>por defecto</strong> es que el archivo de disco duro <strong>crezca dinámicamente</strong>.</p>
+<p style="text-align: justify;">Una vez elegida la opción que más nos interese, hacemos clic en el botón "<strong>Siguiente</strong>". Pasaremos a una nueva ventana en la que tendremos que elegir la ubicación del archivo de disco duro virtual y su tamaño:</p>
+<p style="text-align: justify;"><img src="crear-maquina-virtual7.png" alt="Elegir ubicación del archivo de disco duro virtual y su tamaño" width="800" height="483" style="display: block; margin-left: auto; margin-right: auto;" /><br style="clear: both;" />Aquí podemos modificar el tamaño de archivo de disco duro virtual recomendado, aumentándolo o reduciéndolo.</p>
+<p style="text-align: justify;">Por otro lado, podemos cambiar la ubicación donde se debe guardar el archivo de disco duro virtual. Si os fijáis en la pantalla anterior, observaréis que podemos agrupar máquinas virtuales y que VirtualBox guardará sus discos duros virtuales en una estructura en árbol:</p>
+<ul>
+<li style="text-align: justify;">En el ejemplo de la imagen anterior, las máquinas virtuales se guardarán en el directorio "<strong>VirtualBox VMs</strong>" dentro del directorio home del usuario.</li>
+<li style="text-align: justify;">Si hemos creado un grupo de máquinas virtuales, éstas se guardarán dentro de un directorio alojado dentro del directorio "VirtualBox VMs" con el <strong>nombre del grupo</strong>. Como en el ejemplo anterior, el grupo de máquinas virtuales se llama "Nuevo grupo", las máquinas virtuales se guardarán dentro del directorio "<strong>Nuevo grupo</strong>".</li>
+<li style="text-align: justify;">En cuanto al nombre del disco duro virtual, coincidirá con el nombre de la máquina virtual y se guardará dentro de un subdirectorio con el nombre de la máquina. En el ejemplo: <strong>pdc-zentyal6.2</strong></li>
+</ul>
+<p>En cualquier caso, eso es algo que podemos cambiar.</p>
+<p>Por último, hacemos clic sobre el botón "<strong>Crear</strong>" y habremos creado nuestra primera máquina virtual.</p>
+<p></p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="actividad_2.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_3.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
