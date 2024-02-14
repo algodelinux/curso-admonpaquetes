@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico | Preparación del entorno de trabajo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Esteban M. Navas Martín" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-286"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Preparación del entorno de trabajo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Preparación del entorno de trabajo</a></li>
+   <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+   <li class="current-page-parent"><a href="instalacin_de_virtualbox.html" class="current-page-parent daddy">Instalación de VirtualBox</a>
+   <ul>
+      <li id="active"><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="active no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+      <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+   </ul>
+   </li>
+   <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+   <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+   <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+   <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+   <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+   <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+   <li><a href="crear_una_mquina_virtual.html" class="no-ch">Crear una máquina virtual</a></li>
+   <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+   <li><a href="clonar_una_mquina_virtual.html" class="no-ch">Clonar una máquina virtual</a></li>
+   <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="instalacin_de_virtualbox.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_renew" id="id368">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_renew.png)"><h1 class="iDeviceTitle">Proceso de instalación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta368_113_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En este apartado, vamos a ver cómo instalar el paquete de <strong>VirtualBox</strong> en <strong>Ubuntu 22.04</strong> desde el <strong>entorno gráfico</strong>. Para ello, una vez descargado el paquete correspondiente a nuestra distribución, lo buscamos en el explorador de archivos:</p>
+<p><img src="Instalador-paquete-virtualbox0.png" alt="Descarga Virtualbox" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="505" /></p>
+<p>A continuación, hacemos un <strong>doble clic</strong> sobre el nombre del paquete deb.</p>
+<p style="text-align: justify;">Se iniciará el <strong>instalador de Software</strong> de Ubuntu:</p>
+<p><img src="Instalador-paquete-virtualbox1.png" alt="Instalar paquete virtualbox 1" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="561" /></p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;">Al realizar clic sobre el botón "<strong>Instalar" </strong>habrá dos posibilidades:</p>
+<ul>
+<li style="text-align: justify;">Que nuestro <strong>usuario tenga privilegios de instalación</strong>, por estar incluido en el grupo sudo o en cualquier otro grupo que le permita realizar instalaciones. En este caso, se nos solicitará que introduzcamos nuestra contraseña.</li>
+<li style="text-align: justify;">Que nuestro <strong>usuario no tenga privilegios de instalación</strong>. En cuyo caso, se nos solicitará que introduzcamos la contraseña del administrador, es decir, la contraseña del usuario <strong>root</strong>.</li>
+</ul>
+<p>Introducid la contraseña que corresponda en vuestro sistema. </p>
+<p>En la máquina donde nosotros estamos realizando la instalación, nuestro usuario no tiene privilegios de instalación, y, por tanto, el sistema nos solicita que introduzcamos la contraseña de administrador:</p>
+<p><strong><img src="Instalador-paquete-virtualbox2.png" alt="Instalar paquete virtualbox 2" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="499" /></strong></p>
+<p style="text-align: justify;">Una vez introducida la contraseña, comenzará el proceso de instalación:</p>
+<p><img src="Instalador-paquete-virtualbox3.png" alt="Instalar paquete virtualbox 3" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="561" /></p>
+<p>Si todo va bien, comprobaremos que el paquete ha sido instalado:</p>
+<p><img src="Instalador-paquete-virtualbox4.png" alt="Instalar paquete virtualbox 4" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="561" /></p>
+<p>Y ya podremos cerrar el instalador de software.</p>
+<p>Una vez instalado VirtualBox, podemos buscar la aplicación en el menú para comprobar que se abre sin problemas.</p>
+<p><img src="Instalador-paquete-virtualbox5.png" alt="Instalar paquete virtualbox 5" style="display: block; margin-left: auto; margin-right: auto;" width="642" height="377" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="instalacin_de_virtualbox.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Clonar una máquina virtual | Preparación del entorno de trabajo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Esteban M. Navas Martín" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-297"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Preparación del entorno de trabajo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Preparación del entorno de trabajo</a></li>
+   <li><a href="descarga_de_virtualbox.html" class="no-ch">Descarga de VirtualBox</a></li>
+   <li><a href="instalacin_de_virtualbox.html" class="daddy">Instalación de VirtualBox</a>
+   <ul class="other-section">
+      <li><a href="instalacin_de_virtualbox_en_ubuntu_2204_desde_el_entorno_grfico.html" class="no-ch">Instalación de VirtualBox en Ubuntu 22.04 desde el entorno gráfico</a></li>
+      <li><a href="instalacin_de_virtualbox_en_ubuntu_desde_los_repositorios_de_virtualbox.html" class="no-ch">Instalación de VirtualBox en Ubuntu desde los repositorios de VirtualBox</a></li>
+      <li><a href="instalacin_de_virtualbox_en_windows.html" class="no-ch">Instalación de VirtualBox en Windows</a></li>
+   </ul>
+   </li>
+   <li><a href="el_modo_red_nat.html" class="no-ch">El modo red NAT</a></li>
+   <li><a href="acceso_ssh_en_modo_red_nat.html" class="no-ch">Acceso ssh en modo red NAT</a></li>
+   <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+   <li><a href="importar_una_mquina_virtual.html" class="no-ch">Importar una máquina virtual</a></li>
+   <li><a href="exportar_una_mquina_virtual.html" class="no-ch">Exportar una máquina virtual</a></li>
+   <li><a href="actividad_2.html" class="no-ch">Actividad 2</a></li>
+   <li><a href="crear_una_mquina_virtual.html" class="no-ch">Crear una máquina virtual</a></li>
+   <li><a href="actividad_3.html" class="no-ch">Actividad 3</a></li>
+   <li id="active"><a href="clonar_una_mquina_virtual.html" class="active no-ch">Clonar una máquina virtual</a></li>
+   <li><a href="actividad_4.html" class="no-ch">Actividad 4</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="actividad_3.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_4.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Clonar una máquina virtual</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_info" id="id549">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_info.png)"><h1 class="iDeviceTitle">Procedimiento de clonación de una máquina virtual</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta549_117_2" class="block iDevice_content">
+<div class="exe-text"><p><span>La <strong>clonación</strong> nos permite <strong>crear una nueva máquina virtual a partir de otra</strong> y exactamente igual a la primera.</span></p>
+<p><span>Para <strong>clonar una máquina virtual</strong> en VirtualBox, la máquina que queremos clonar debe encontrarse <strong>apagada</strong>.</span></p>
+<p><span>Existen <strong>dos tipos</strong> de clonación:</span></p>
+<ul>
+<li align="JUSTIFY"><strong>Completa</strong>: Cada vez que creamos una nueva máquina virtual, se crea una nueva carpeta dentro del directorio de máquinas virtuales donde se alojan todos los archivos de la máquina virtual. La opción de clonación completa c<span>opia todas las imágenes de disco dependientes a la nueva carpeta de la nueva máquina virtual. Al realizar una clonación completa, el clon puede funcionar completamente sin la máquina virtual de origen.</span></li>
+<li align="JUSTIFY"><strong>Enlazada</strong>: Al utilizar la clonación enlazada, se crea una nueva máquina virtual, pero los discos virtuales de la máquina clon serán los de la máquina original. Ésto significa que la máquina virtual clon es dependiente de la máquina virtual original. Este tipo de clonación, se usa para disponer de <strong>escritorios virtuales</strong>, ya que ambas máquinas comparten los mismos discos duros.</li>
+</ul>
+<p>Podemos clonar una máquina virtual:</p>
+<ul>
+<li>Desde la opción "<strong>Clonar</strong>" del menú de contexto que aparece al hacer clic con el botón derecho del ratón sobre la máquina virtual en el administrador de máquinas virtuales.</li>
+<li>Seleccionando la máquina virtual y haciendo clic en el menú "<strong>Máquina -&gt; Clonar</strong>".</li>
+<li>Seleccionando la máquina virtual y pulsando la combinación de teclas "<strong>Ctrl+O</strong>".</li>
+<li>Seleccionando la máquina virtual, abriendo la opción de instantáneas y haciendo clic en el botón de clonar de la oveja.</li>
+</ul>
+<p>Al hacer clic en "<strong>Clonar</strong>", iniciaremos un asistente de clonación:</p>
+<p><img src="ClonarMaquinaVirtual.png" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="500" /></p>
+<p>Para poder elegir el modo de clonación (<strong>completa o enlazada</strong>), podemos entrar en "<strong>Modo experto</strong>", aunque más tarde, en el asistente, también nos preguntará.</p>
+<p>Supongamos que nos interesa realizar un clon de la máquina virtual <strong>bdc-zentyal6.2</strong> para realizar pruebas en ella. Podemos cambiar el nombre para el clon por <strong>bdc-zentyal6.2-test:</strong></p>
+<p><img src="ClonarMaquinaVirtual2.png" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="500" /></p>
+<p>Dejamos el resto de opciones por defecto y hacemos clic en el botón "<strong>Siguiente"</strong>.</p>
+<p>El asistente nos pedirá que seleccionemos el tipo de clonación (<strong>completa o enlazada</strong>):</p>
+<p><img src="ClonarMaquinaVirtual3.png" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="500" /></p>
+<p>Como lo que nos interesa en estos momentos es realizar una clonación completa, dejamos seleccionada la opción por defecto y hacemos clic en el botón "<strong>Siguiente</strong>".</p>
+<p>El siguiente paso que nos muestra el asistente es <strong>muy importante</strong> cuando en la máquina virtual original hemos creado instantáneas:</p>
+<p><img src="ClonarMaquinaVirtual4.png" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="500" /></p>
+<p>Este paso nos va a permitir:</p>
+<ul>
+<li>Clonar la máquina de manera que el clon tan sólo contenga el <strong>estado actual de la máquina original</strong>.</li>
+<li>Realizar una clonación que conserve <strong>todas las instantáneas</strong>.</li>
+</ul>
+<p>Ésto puede ser muy útil para obtener clones en un estado concreto. Si estáis haciendo pruebas y habéis conseguido un estado en el que todo funciona y no hay problemas, podría ser interesante clonar en la instantánea en la que hemos conseguido el estado deseado.</p>
+<p>En este ejemplo, hemos decidido <strong>clonar sólo el estado actual</strong>. Así que hacemos clic en el botón "<strong>Clonar</strong>" y comenzará el proceso de clonación.</p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="actividad_3.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_4.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
