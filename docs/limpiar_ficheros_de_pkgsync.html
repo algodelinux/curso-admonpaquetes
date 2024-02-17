@@ -267,17 +267,21 @@
 <div class="exe-text"><p class="standard" id="magicparlabel-2759">El paquete pkgsync nos proporciona un script <b>clean-pkgsync-files</b>  que elimina de las listas de pkgsync aquellos paquetes que no se encuentran en los repositorios.</p>
 <p class="standard">Este script examina todos los ficheros de listas de paquetes del directorio <strong>/etc/pkgsync/</strong> (incluidos los ficheros que son copias de seguridad), excepto los ficheros "<strong>.all</strong>", comprueba si cada paquete incluido en las listas existe en los repositorios que tenga agregados el equipo, y, si no existe, lo elimina del fichero en el que lo haya encontrado.</p>
 <p class="standard">Además, guarda en el fichero <strong>/var/log/pkgsync/removedfromlists.log</strong> la lista de nombres de paquetes eliminados.</p>
-<p class="standard">Es el equivalente a ejecutar un <b>pkgsync -tr </b>en línea de comandos.</p>
 <p class="standard">No olvidéis ejecutarlo con sudo como root:</p>
-<table style="width: 100%;" class="exe-table" border="1">
+<table style="width: 100%; height: 27px;" class="exe-table" border="1">
 <tbody>
-<tr>
-<td style="width: 100%;"><span style="font-family: terminal, monaco, monospace;">   # clean-pkgsync-files</span></td>
+<tr style="height: 27px;">
+<td style="width: 100%; height: 27px;"><span style="font-family: terminal, monaco, monospace;">   # clean-pkgsync-files</span></td>
 </tr>
 </tbody>
 </table>
-<p>Es importante usar el script "<strong>clean-pkgsync-files</strong>" o su equivalente "<strong>pkgsync -tr</strong>". Al utilizarlo, eliminaremos de los ficheros de listas de paquetes aquellos paquetes que no existan en los repositorios, y, con ello, evitaremos el fallo de ejecución de pkgsync por el error que muestra aptitude cuando se le pide instalar o desinstalar un paquete que no existe en los repositorios.</p>
-<p>Si utilizáis un módulo puppet que suministra los ficheros de pkgsync a los clientes, una vez que los hayáis limpiado en una máquina, no olvidéis subirlos al módulo puppet de vuestro servidor para que los nuevos ficheros se propagen al resto de máquinas.</p></div>
+<p>Es importante destacar que, aunque se consigue el mismo resultado al ejecutar "<strong>clean-pkgsync-files</strong>" o su equivalente "<strong>pkgsync -tr</strong>", no se hace exactamente lo mismo:</p>
+<ul>
+<li><strong>pkgsync -tr</strong> comenta los nombres de los paquetes.</li>
+<li><strong>clean-pkgsync-files</strong> elimina los nombres de los paquetes.</li>
+</ul>
+<p>Es importante usar el script "<strong>clean-pkgsync-files</strong>" o "<strong>pkgsync -tr</strong>". Al hacerlo, eliminaremos de los ficheros de listas de paquetes aquellos paquetes que no existan en los repositorios, y, con ello, evitaremos el fallo de ejecución de pkgsync por el error que muestra aptitude cuando se le pide instalar o desinstalar un paquete que no existe en los repositorios.</p>
+<p><strong>Importante</strong>: Si utilizáis un módulo puppet que suministra los ficheros de pkgsync a los clientes, una vez que los hayáis limpiado en una máquina, no olvidéis subirlos al módulo puppet de vuestro servidor para que los nuevos ficheros se propagen al resto de máquinas.</p></div>
 </div>
 </div>
 </article>
