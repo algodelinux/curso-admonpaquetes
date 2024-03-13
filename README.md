@@ -8,3 +8,4 @@ Archivos para el curso de Administración de paquetes en una red de equipos Ubun
 - [bullseye.ova](https://drive.google.com/file/d/1X9qPN96gq_QWSLCExmsoIyYNiFhbT4nY/view?usp=drive_link)
 - [puppetserver.ova](https://drive.google.com/file/d/1Ymk1gUtLc4aCYaYA-rz___rXgAJfGN4d/view?usp=drive_link)
 - [xubuntu.ova](https://drive.google.com/file/d/1J4UKMjUtjtpvZRDi7LcojBhvstNoW6fS/view?usp=drive_link)
+- [LubuntuBionic.ova](https://drive.google.com/file/d/1PvhB0mJCLNL70wUsugNuwf2EIwZLwDEw/view?usp=drive_link)
