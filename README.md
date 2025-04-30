@@ -12,5 +12,5 @@ Archivos para el curso de Administración de paquetes en una red de equipos Ubun
 - [LubuntuBionic.ova](https://drive.google.com/file/d/1PvhB0mJCLNL70wUsugNuwf2EIwZLwDEw/view?usp=drive_link)
 ## Paquetes
 - [linex-ubuntu-puppet_2.73_all.deb](https://drive.google.com/file/d/1qCHos1rJSYP8Phfml8WHWIcTxPAWwnMx/view?usp=drive_link)
-- [pkgsync_2.38_all.deb](https://drive.google.com/file/d/1vtAwRSrkAs_QLevTr5rifozJ7a-uK81F/view?usp=drive_link)
+- [pkgsync_2.51_all.deb](https://drive.google.com/file/d/16Z9wES2wvFCTBC8DLTGd7Yjrtuolu0P6/view?usp=drive_link)
 - [lanshare_1.2.1-2_amd64.deb](https://drive.google.com/file/d/19DzClVSW51tZG-LyHHhOzGkvVHS30dGX/view?usp=drive_link)
