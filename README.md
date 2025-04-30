@@ -1,8 +1,9 @@
 # curso-admonpaquetes
 Archivos para el curso de Administración de paquetes en una red de equipos Ubuntu/Debian
 ## ISOS
-- [Debian 11](https://drive.google.com/file/d/1NZuq7Syam3AFnhZdF4PAK4PfVG6TiASE/view?usp=drive_link)
-- [Xubuntu 22.04](https://drive.google.com/file/d/1YN8gwgdfTyThWA59_VKiYhnH3IVgSy4x/view?usp=drive_link)
+- [Debian 11](https://drive.google.com/file/d/1lp2e2Twfwwu1Xcd0T4AFzukl8n0Vxp5s/view?usp=drive_link)
+- [Debian 12](https://drive.google.com/file/d/1YCJj4JNs5wsvQxNuKsad2yGoWKRcEC8Q/view?usp=drive_link)
+- [Xubuntu 22.04](https://drive.google.com/file/d/1XQYy-SzQac32-ToiEzbmIxKriZLd0Z9h/view?usp=drive_link)
 ## Máquinas virtuales
 - [router.ova](https://drive.google.com/file/d/1WPC4eiyWwa6L5pBP1QSeq5mW64dzBF3D/view?usp=drive_link)
 - [bullseye.ova](https://drive.google.com/file/d/1X9qPN96gq_QWSLCExmsoIyYNiFhbT4nY/view?usp=drive_link)
