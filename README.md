@@ -9,8 +9,8 @@ Archivos para el curso de Administración de paquetes en una red de equipos Ubun
 - [bullseye.ova](https://drive.google.com/file/d/1Ly76x1TKL105RTDh8-KMlw7_e1w178Mb/view?usp=drive_link)
 - [puppetserver.ova](https://drive.google.com/file/d/1raeIFHR1R0WpHlorUOt_839m1zDbdJal/view?usp=drive_link)
 - [puppetserver-repolocal-mirror.ova](https://drive.google.com/file/d/1VcEx5V5daVoQ9V7_fMQzYtM_pHqZc0Qa/view?usp=drive_link) Servidor puppet con el repositorio local y el mirror instalados
-- [xubuntu.ova](https://drive.google.com/file/d/1J4UKMjUtjtpvZRDi7LcojBhvstNoW6fS/view?usp=drive_link)
-- [LubuntuBionic.ova](https://drive.google.com/file/d/1PvhB0mJCLNL70wUsugNuwf2EIwZLwDEw/view?usp=drive_link)
+- [xubuntu.ova](https://drive.google.com/file/d/1AA6scjOwMJJ3x7k96vWswD2lpSCxXG3m/view?usp=drive_link)
+- [LubuntuBionic.ova](https://drive.google.com/file/d/1EVm7wVPW5VODsg5dMBa2_60R5ZziyU9U/view?usp=drive_link)
 ## Paquetes
 - [linex-ubuntu-puppet_2.73_all.deb](https://drive.google.com/file/d/1qCHos1rJSYP8Phfml8WHWIcTxPAWwnMx/view?usp=drive_link)
 - [pkgsync_2.51_all.deb](https://drive.google.com/file/d/16Z9wES2wvFCTBC8DLTGd7Yjrtuolu0P6/view?usp=drive_link)
