@@ -6,6 +6,7 @@ Archivos para el curso de Administración de paquetes en una red de equipos Ubun
 - [Xubuntu 22.04](https://drive.google.com/file/d/1XQYy-SzQac32-ToiEzbmIxKriZLd0Z9h/view?usp=drive_link)
 ## Máquinas virtuales
 - [router.ova](https://drive.google.com/file/d/1ia-ngiu3Lko7_UylTdn0-67cTqAEdIDd/view?usp=drive_link)
+- [bookworm.ova](https://drive.google.com/file/d/1DEQP6p8__jga0S5_2BW2JswwbnWVj7Is/view?usp=drive_link)
 - [bullseye.ova](https://drive.google.com/file/d/1Ly76x1TKL105RTDh8-KMlw7_e1w178Mb/view?usp=drive_link)
 - [puppetserver.ova](https://drive.google.com/file/d/1raeIFHR1R0WpHlorUOt_839m1zDbdJal/view?usp=drive_link)
 - [puppetserver-repolocal-mirror.ova](https://drive.google.com/file/d/1VcEx5V5daVoQ9V7_fMQzYtM_pHqZc0Qa/view?usp=drive_link) Servidor puppet con el repositorio local y el mirror instalados
